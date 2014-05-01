@@ -1,0 +1,120 @@
+<!--
+<style>
+    .row {
+        border-bottom:1px solid #ddd;
+        clear:both;
+    }
+    
+    .wrapper {
+        padding:2% 5%;
+        clear:both;
+    }
+    
+    .image {
+        width:20%;
+        float:left;
+        overflow:hidden;
+    }
+    
+    .name {
+        width:80%;
+        float:left;
+        font-size:125%;
+        color:#0B173B;
+    }
+    
+    #message {
+        background:#FAFAFA;
+        font-size:125%;
+        color:#ddd;
+        text-align:center;
+    }
+    
+    .row:nth-child(odd) {
+        background:white;
+    }
+    
+    .row:nth-child(even) {
+        background:#FAFAFA;
+    }
+    
+</style>
+
+
+<div id="contacts">
+    <div id="clone" class="row" style="display:none">
+        <div class="wrapper">
+            <div class="image">
+                <img>
+            </div>
+            <div class="name"></div>
+            <div style="clear:both"></div>
+        </div>
+        <div style="clear:both"></div>
+    </div>
+</div>
+
+<div id="message" style="display:none">
+    
+</div>
+
+-->
+
+<style>
+    .wrapper {
+        padding:2% 5%;
+    }
+    
+    #contact {
+        width:90%;
+        padding:0 5%;
+        border:1px solid #aaa;
+        font-size:125%;
+        color:#848484;
+    }
+    
+    #contact : focus {
+        outline:none;   
+    }
+    
+    .search {
+        width:100%;
+        margin:0 auto;
+        margin-top:5%;
+        -moz-box-shadow: 0px 0px 1px #000000;
+        -webkit-box-shadow: 0px 0px 1px #000000;
+        box-shadow: 0px 0px 1px #000000;   
+        
+        overflow:auto;
+        border:1px solid #F2F2F2;
+    }
+    
+    .row {
+        padding:0 5%;
+        text-align:left;
+        font-size:110%;
+        color:#848484;
+        background:#FAFAFA;
+        border-bottom:1px solid #F2F2F2;
+        
+    }
+    
+    .row > img {
+        position:relative;
+        top:12.5%;
+        height:75%;
+        border-radius:100%;
+        float:right;
+    }
+    
+</style>
+
+<div class="wrapper">
+
+    <div class="input">
+        <input type="text" id="contact" placeholder="Contact">
+    </div>
+    
+    <div class="search"></div>
+    
+</div>

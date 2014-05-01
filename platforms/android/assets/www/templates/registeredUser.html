@@ -1,0 +1,68 @@
+<style>
+    .registeredUser {
+        width:100%;   
+    }
+    
+    .sidebar {
+        width:15%;
+        position:absolute;
+        z-index:1;
+        opacity:0.85;
+        background:#1A1A1A;
+        margin:0;
+        padding:0;
+    }
+    
+    .sidebar table {
+        margin:0;
+        padding:0;
+        border-spacing:0;
+        border-collapse:collapse;
+        //background:#1A1A1A;
+    }
+    
+    .sidebarElem {
+        padding:0;
+        margin:0;
+        text-align:center;
+        font-size:150%;
+        width:100%;
+        font-weight:bold;
+        color:#1E99C1;
+    }
+    
+    .selected {
+        background:white;
+    }
+    
+    .content {
+        width:100%; 
+    }
+    
+    
+</style>
+
+<div class="registeredUser">
+    <div class="sidebar" style="display:none">
+        <table width="100%" >
+            <tr>
+                <td id="remainder" class="sidebarElem">
+                    R
+                </td>
+            </tr>
+            <tr>
+                <td id="notes" class="sidebarElem">
+                    N
+                </td>
+            </tr>
+            <tr>
+                <td id="userInfo" class="sidebarElem selected">
+                    I
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="content" class="content">
+        
+    </div>
+</div>

@@ -1,0 +1,147 @@
+<style>
+    .wrapper {
+        
+    }
+    
+    .input {
+        width:90%;
+        padding:2% 5% 2% 5%;
+        background:#F2F2F2;
+        background:#ECF0F1;
+        display:block;
+        box-shadow:0px 1px 1px #aaa;
+    }    
+    .input>input {
+        display:block;
+        width:90%;
+        height:40px;
+        border:1px solid silver;
+        padding:0 5%;
+        /*margin:2% 5%;*/
+        color:#848484;
+    }
+    
+    .input>input : focus {
+        outline:none;   
+    }
+    
+    .inputWrapper {
+        margin-bottom:2px;   
+    }
+    
+    .remainders { 
+        //position:relative;
+        //top:2px;
+        width:96%;
+        margin:0 auto;
+        overflow:auto;
+    }
+    
+    .remainderItem {
+        background:white;
+        padding:2% 5%;
+        font-size:100%;
+        font-weight:600;
+        text-overflow:ellipsis;
+        color:#848484;
+        width:90%;
+        border-bottom:1px solid #ccc;
+        overflow:hidden;
+    }
+    
+    .remainderMessagePreview {
+        width:85%;
+        float:left;   
+        overflow-x:hidden;
+        overflow-y:hidden;
+        text-overflow:clip;
+    }
+    
+    .remainderStatus {
+        width:15%;
+        float:left;   
+    }
+    
+    .statusIcon {
+        width:100%;
+        height:100%;
+        border-radius:100%;
+        font-weight:bold;
+        font-size:150%;
+        text-align:center;
+        color:white;
+    }
+    
+    .done {
+        background:#26A65B;   
+    }
+    
+    .pending {
+        background:#19B5FE;   
+    }
+    
+    .message {
+        font-size:85%;
+        color:#848484;
+        font-weight:bold;
+    }
+    
+    #error {
+        color:#D91E18;   
+    }
+    
+</style>
+
+<div class="wrapper">
+    
+        <div class="inputWrapper">
+            <div class="input">
+                <input id="dummyInput" placeholder="Remainder...">
+            </div>
+        </div>
+        <div class="remainders" style="display:none">
+            
+            <div class='remainderItem' style="display:none"> 
+                <div class='remainderMessagePreview'> Test Pavan asdddd ddd dsf ddd ads sad ada as qd</div>
+                <div class='remainderStatus'> 
+                    <div class='statusIcon pending'> 
+                        P
+                    </div> 
+                </div>
+                <div style="clear:both"></div>
+            </div>
+            
+            <!--<div class="remainderItem">
+                <div class="remainderMessagePreview">
+                    Talk about Pavan
+                </div>
+                <div class="remainderStatus">
+                    <div class="statusIcon done">
+                        D
+                    </div>
+                </div>
+            </div>
+            <div class="remainderItem">
+                <div class="remainderMessagePreview">
+                    Think about Pavan
+                </div>
+                <div class="remainderStatus">
+                    <div class="statusIcon pending">
+                        P
+                    </div>
+                </div>
+            </div>-->
+        </div>
+        
+        <div id="nodata" class="message" style="display:none">
+            Nothing to display
+        </div>
+    
+        <div id="error" class="message" style="display:none">
+            Please try again later
+        </div>
+        
+    </div>
+    
+    
+</div>

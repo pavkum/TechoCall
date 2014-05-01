@@ -1,0 +1,165 @@
+<style>
+    
+    .wrapper {
+        width:90%;
+        padding:1% 5%;
+        
+    }
+    
+    .registeredContact{
+        font-size:100%;
+        border-bottom:1px solid #D2D7D3;
+        padding:2% 5%;
+        background:white;
+        
+    }
+    
+    table{
+        margin:0;
+        padding:0;
+    }
+    
+    .contactImage {
+        overflow:hidden;
+    }
+    
+    .contactName {
+        font-size:125%;
+        font-weight:650;
+        text-align:left;
+        color:#0B173B;
+    }
+    
+    .contact {
+        padding:2% 5%;
+        border-bottom:1px solid #D2D7D3;
+    }
+    
+    .image {
+        width:20%;
+        float:left;   
+    }
+    
+    .image > img {
+        
+    }
+    
+    .name {
+        line-height:48px;
+        width:80%;
+        float:left;
+        font-weight:650;
+        font-size:110%;
+        color:#848484;
+        text-align:left;
+    }
+    
+    
+    @media screen and (-webkit-device-pixel-ratio: 1.5) {
+        
+        .contact {
+            height:72px;
+        }
+    
+        .image > img {
+            height:72px;
+            width:72px;
+            border-radius:72px;
+        }
+    
+        .name {
+            line-height:72px;
+        }
+    }
+    
+    @media screen and (-webkit-device-pixel-ratio: 2) {
+        
+        .contact {
+            height:48px;
+        }
+    
+        .image > img {
+            height:48px;
+            width:48px;
+            border-radius:48px;
+        }
+    
+        .name {
+            line-height:48px;
+        }
+    }
+    
+    @media screen and (-webkit-device-pixel-ratio: 1.5) {
+        
+        .contact {
+            height:48px;
+        }
+    
+        .image > img {
+            height:48px;
+            width:48px;
+            border-radius:48px;
+        }
+    
+        .name {
+            line-height:48px;
+        }
+    }
+    
+    @media screen and (-webkit-device-pixel-ratio: 1.0) {
+        
+        .contact {
+            height:32px;
+        }
+    
+        .image > img {
+            height:32px;
+            width:32px;
+            border-radius:32px;
+        }
+    
+        .name {
+            line-height:32px;
+        }
+    }
+    
+    @media screen and (-webkit-device-pixel-ratio: 0.75) {
+        
+        .contact {
+            height:24px;
+        }
+    
+        .image > img {
+            height:24px;
+            width:24px;
+            border-radius:24px;
+        }
+    
+        .name {
+            line-height:24px;
+        }
+    }
+    
+</style>
+
+<div class="wrapper">
+    
+    <div id="clone" class="contact" style="display:none">
+        <div class="image">
+            <img src="https://scontent-b-cdg.xx.fbcdn.net/hphotos-prn2/t1.0-9/1458566_768090913201444_94017057_n.jpg">
+        </div>
+        <div class="name">
+            Pavan Kumar L
+        </div>
+        <div style="clear:both"></div>
+    </div>
+    
+    <div id="nodata" class="message">
+        Nothing to display
+    </div>
+    
+    <div id="error" class="message">
+        Please try again later
+    </div>
+
+</div>

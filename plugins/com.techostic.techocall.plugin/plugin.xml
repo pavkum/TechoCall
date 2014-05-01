@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:rim="http://www.blackberry.com/ns/widgets"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="com.techostic.techocall.plugin"
+    version="0.0.1">
+
+    <name>Storage</name>
+    <description>Cordova Storage Techostic Plugin</description>
+    <license>Apache 2.0</license>
+
+    <js-module src="www/techoStorage.js" name="techoStorage">
+        <clobbers target="techoStorage" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="techoStorage">
+                <param name="android-package" value="com.techostic.techocall.plugin.StoragePlugin" />
+            </feature>
+        </config-file>
+
+         <!--<source-file src="src/StoragePlugin.java" target-dir="src/com/techostic/techocall/plugin" /> -->
+
+    </platform>
+
+        
+</plugin>
