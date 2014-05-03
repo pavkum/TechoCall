@@ -19,7 +19,7 @@ var registeredUser = (function (){
     };
     
     var adjust = function () {
-        var pos = elem.position();
+        /*var pos = elem.position();
         
         var width = elem.width();
         var height = elem.height();
@@ -27,14 +27,14 @@ var registeredUser = (function (){
         var sidebar = $('.sidebar');
         sidebar.css("top",pos.top);
         sidebar.css("left",pos.left);
-        sidebar.width(Math.ceil(width * 0.15));
+        sidebar.width(width * 0.15);
         sidebar.height(height);
         
-        $('.sidebar table').width(Math.ceil(width * 0.15));
+        $('.sidebar table').width(width * 0.15);
         
-        $('.sidebarElem').height(height*0.1);
+        $('.sidebarElem').height(height*0.1);*/
         
-        $('.content').height(height);
+        //$('.content').height(height);
     };
     
     var addSidebarEvents = function () {
@@ -54,7 +54,7 @@ var registeredUser = (function (){
         displayName = name;
         photo = UserPhoto;
         
-        $('body').trigger('addToHistory',['showUser' , [id , displayName , photo]]);
+        $('body').trigger('addToHistory',['showTechoContacts']);
         
         var def = new $.Deferred();
         

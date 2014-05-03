@@ -23,8 +23,6 @@ var registeredContacts = (function (){
     
     var loadContactInfoSuccess = function (data){
         
-        
-        
         if(data.contacts.length === 0) {
             $('#nodata').show();
             return;
@@ -67,8 +65,6 @@ var registeredContacts = (function (){
             
             $(this).off(event);
             
-            
-            
             var target = $(event.currentTarget);
             
             var id = target.attr('id');
@@ -86,8 +82,6 @@ var registeredContacts = (function (){
         
         $('body').trigger('headerMiddle',['Techo Call']);
         $('body').trigger('headerRight',['+','getAllContacts']);// local event
-        
-        $('body').trigger('addToHistory',['showTechoContacts']);
         
         var def = new $.Deferred();
         loadTemplate(def);

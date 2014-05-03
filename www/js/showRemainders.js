@@ -17,24 +17,6 @@ var showAndRemainders = (function (){
         });
     };
     
-    var adjust = function () {
-        elem = $('#content');
-        var height = elem.height();
-        
-        $('.wrapper').height(height);
-        
-        //var itemHeight = height/10;
-        $('.input > input').height(height/10);
-        
-        $('.remainders').height(height * 0.9 - 2);
-        
-        var width = $('.remainderItem').width() * 0.15;
-        
-        $('.remainderItem').height(width);
-        $('.remainderItem').css('line-height',width + 'px');
-        
-    };
-    
     var loadRemaindersSuccess = function (data){
         
         if(data && data.userRemainders){
@@ -63,7 +45,6 @@ var showAndRemainders = (function (){
                 
                 remainderWrapper.append(clone);
                 
-                adjust();
             }
         }else{
             loadRemaindersError('Nothing to display');   
@@ -85,7 +66,6 @@ var showAndRemainders = (function (){
         loadTemplate(def , contactID);
         
         def.done(function (contactID){
-            adjust();
             loadRemainders(contactID);
             registerEvents(contactID);
             //$('body').trigger('showNote'); // testing

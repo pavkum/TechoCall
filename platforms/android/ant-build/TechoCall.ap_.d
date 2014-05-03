@@ -23,7 +23,9 @@
 /home/pavan/android_project/TechoCall/platforms/android/assets/www/js \
 /home/pavan/android_project/TechoCall/platforms/android/assets/www/dialer.html \
 /home/pavan/android_project/TechoCall/platforms/android/assets/www/css/techocall.css \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/css/jquery.mobile.custom.theme.min.css \
 /home/pavan/android_project/TechoCall/platforms/android/assets/www/css/dialer.css \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/css/jquery.mobile.custom.structure.min.css \
 /home/pavan/android_project/TechoCall/platforms/android/assets/www/plugins/org.apache.cordova.dialogs \
 /home/pavan/android_project/TechoCall/platforms/android/assets/www/plugins/com.techostic.techocall.plugin \
 /home/pavan/android_project/TechoCall/platforms/android/assets/www/plugins/org.apache.cordova.contacts \
@@ -565,11 +567,13 @@
 /home/pavan/android_project/TechoCall/platforms/android/assets/www/js/logger.js \
 /home/pavan/android_project/TechoCall/platforms/android/assets/www/js/utilities.js \
 /home/pavan/android_project/TechoCall/platforms/android/assets/www/js/showContacts.js \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/js/sidebar.js \
 /home/pavan/android_project/TechoCall/platforms/android/assets/www/js/dialer \
 /home/pavan/android_project/TechoCall/platforms/android/assets/www/js/note.js \
 /home/pavan/android_project/TechoCall/platforms/android/assets/www/js/jquery.js \
 /home/pavan/android_project/TechoCall/platforms/android/assets/www/js/header.js \
 /home/pavan/android_project/TechoCall/platforms/android/assets/www/js/fastclick.js \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/js/jquery.mobile.custom.min.js \
 /home/pavan/android_project/TechoCall/platforms/android/assets/www/js/showRemainders.js \
 /home/pavan/android_project/TechoCall/platforms/android/assets/www/js/registeredUser.js \
 /home/pavan/android_project/TechoCall/platforms/android/assets/www/js/dialer/dialer.js \

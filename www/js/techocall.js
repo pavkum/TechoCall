@@ -36,6 +36,22 @@ var techocall = (function (){
         }
     });
     
+    $('body').on('clearHistory' , function (){
+        historyList = [];
+        $('body').trigger('hideBackButton'); 
+    });
+    
+    
+    $(document).on('backbutton' , function (event){
+        
+        if(historyList.length != 0) {
+            $('body').trigger('triggerHistory');    
+            event.stopPropagation();
+        }else{
+            navigator.app.exitApp();   
+        }
+    });
+    
     initialize();
 });
 //$(document).ready(function (){
@@ -45,12 +61,12 @@ $(document).on('deviceready',function (){
     
     //Logger.off();
     
-    Logger.error('app','started');
-    
     techocall();
     // load all at once - no AMD
     $('body').trigger('headerReady');
     $('body').trigger('RegisteredContactsReady');
     $('body').trigger('RegisteredUserReady');
     $('body').trigger('ContactsReady');
+    
+    //alert(window.devicePixelRatio + " : " + window.height + " : " + $('header').height());
 });

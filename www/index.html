@@ -4,34 +4,77 @@
         <meta charset="utf-8" />
         <meta name="format-detection" content="telephone=no" />
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=medium-dpi" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/techocall.css" />
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile.custom.structure.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile.custom.theme.min.css" />
         
         <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/jquery.mobile.custom.min.js"></script>
         <script type="text/javascript" src="js/fastclick.js"></script>
         
         <title>Techo Call</title>
     </head>
     <body>
         <header>
-            <table width="100%">
+            <table width="100%" height="100%">
                 <tr>
-                    <td id="logo" width="15%" class="headerBorderRight" style="font-size:125%">
+                    <td id="logo" width="15%" class="headerBorderRight">
                         <div id="backbutton">&lt;</div>
                         <div id="icon">C</div>
                     </td>
-                    <td id="middleColumn" width="70%">
+                    <td id="middleColumn" width="70%" >
                         <!--User Info-->
                     </td>
-                    <td id="rightColumn" width="15%" class="headerBorderLeft">
-                        <!--<div class="" style="overflow:hidden">
-                            <img src="https://scontent-b-cdg.xx.fbcdn.net/hphotos-prn2/t1.0-9/1458566_768090913201444_94017057_n.jpg" width="32px" height="32px" style="border-radius:32px"/>  All these things will be handled by header.js based on device dpi 
-                        </div>-->
+                    <td id="rightColumn" width="15%" class="headerBorderLeft1">
+                        
                     </td>
                 </tr>
             </table>
         </header>
+        
+        <div class="sidebar" id="sidebar">
+            
+            <div class="topStack">
+                <div id="remainder" class="sidebarElem" style="background:#EF4836">
+                    R
+                </div>
+                <div class="sidebarElem" style="background:#F39C12">
+                    N
+                </div>
+                <div class="sidebarElem" style="background:#BF55EC">
+                    I
+                </div>
+            </div>
+            
+            <div class="bottomStack">
+                <div class="sidebarElem" style="background:#BF55EC">
+                    Q
+                </div>
+            </div>
+            
+            
+                <!--<table width="100%" >
+                    <tr>
+                        <td id="remainder" class="sidebarElem" style="background:#EF4836">
+                            R
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="notes" class="sidebarElem" style="background:#F39C12">
+                            N
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="userInfo" class="sidebarElem selected" style="background:#BF55EC">
+                            I
+                        </td>
+                    </tr>
+                </table>-->
+        </div>
+        
         <div id="workarea">
+            
         
         </div>
         <script type="text/javascript" src="cordova.js"></script>
@@ -48,6 +91,8 @@
         <script type="text/javascript" src="js/showRemainders.js"></script>
         <script type="text/javascript" src="js/note.js"></script>
         <script type="text/javascript" src="js/showContacts.js"></script>
+        
+        <script type="text/javascript" src="js/sidebar.js"></script>
         
     </body>
 </html>

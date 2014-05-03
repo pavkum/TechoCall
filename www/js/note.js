@@ -18,7 +18,7 @@ var note = (function (){
         var width = elem.width();
         var height = elem.height();
 
-        $('#note').height(height*0.4);
+        //$('#note').height(height*0.4);
     };
     
     $('body').on('note' ,  function (event , id , createMode , remainderObj){
@@ -33,7 +33,7 @@ var note = (function (){
         loadTemplate(def);
         
         def.done(function (){
-            showNote();
+            //showNote();
             
             if(isNew) {
                 $('#delete').hide();
