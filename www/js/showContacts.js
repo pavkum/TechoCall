@@ -132,6 +132,8 @@ var contacts = (function (){
     var initialize = function () {
         var def = new $.Deferred ();
         
+        $('body').trigger('addToHistory',['showTechoContacts']);
+        
         $('body').trigger('headerMiddle',['Add Contact']);
         $('body').trigger('headerRight',['D','toUser']);// local event
         
