@@ -4,7 +4,9 @@
         <meta charset="utf-8" />
         <meta name="format-detection" content="telephone=no" />
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height , target-densitydpi=device-dpi"/>
+        <!-- , target-densitydpi=device-dpi" -->
+        
         <link rel="stylesheet" type="text/css" href="css/techocall.css" />
         <link rel="stylesheet" type="text/css" href="css/jquery.mobile.custom.structure.min.css" />
         <link rel="stylesheet" type="text/css" href="css/jquery.mobile.custom.theme.min.css" />
@@ -33,44 +35,30 @@
             </table>
         </header>
         
-        <div class="sidebar" id="sidebar">
+        <div class="sidebar" id="sidebar" style="display:none">
             
-            <div class="topStack">
-                <div id="remainder" class="sidebarElem" style="background:#EF4836">
-                    R
+            <div class="stack">
+            
+                <div class="topStack">
+                    <!--<div id="remainder" class="sidebarElem" style="background:#EF4836">
+                        R
+                    </div>
+                    <div class="sidebarElem" style="background:#F39C12">
+                        N
+                    </div>
+                    <div class="sidebarElem" style="background:#BF55EC">
+                        I
+                    </div>-->
                 </div>
-                <div class="sidebarElem" style="background:#F39C12">
-                    N
+
+                <div class="bottomStack">
+                    <!--<div class="sidebarElem" style="background:#BF55EC">
+                        Q
+                    </div>-->
                 </div>
-                <div class="sidebarElem" style="background:#BF55EC">
-                    I
-                </div>
+            
             </div>
             
-            <div class="bottomStack">
-                <div class="sidebarElem" style="background:#BF55EC">
-                    Q
-                </div>
-            </div>
-            
-            
-                <!--<table width="100%" >
-                    <tr>
-                        <td id="remainder" class="sidebarElem" style="background:#EF4836">
-                            R
-                        </td>
-                    </tr>
-                    <tr>
-                        <td id="notes" class="sidebarElem" style="background:#F39C12">
-                            N
-                        </td>
-                    </tr>
-                    <tr>
-                        <td id="userInfo" class="sidebarElem selected" style="background:#BF55EC">
-                            I
-                        </td>
-                    </tr>
-                </table>-->
         </div>
         
         <div id="workarea">

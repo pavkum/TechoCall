@@ -40,6 +40,7 @@
 /home/pavan/android_project/TechoCall/platforms/android/ant-build/classes/com/techostic/techocall/plugin/StoragePluginOld$2.class \
 /home/pavan/android_project/TechoCall/platforms/android/ant-build/classes/com/techostic/techocall/plugin/StoragePlugin$5.class \
 /home/pavan/android_project/TechoCall/platforms/android/ant-build/classes/com/techostic/techocall/plugin/StoragePluginOld$1.class \
+/home/pavan/android_project/TechoCall/platforms/android/ant-build/classes/com/techostic/techocall/plugin/DialerPlugin.class \
 /home/pavan/android_project/TechoCall/platforms/android/ant-build/classes/com/techostic/techocall/plugin/StoragePlugin$2.class \
 /home/pavan/android_project/TechoCall/platforms/android/ant-build/classes/com/techostic/techocall/plugin/StoragePluginOld.class \
 /home/pavan/android_project/TechoCall/platforms/android/ant-build/classes/com/techostic/techocall/plugin/StoragePlugin$6.class \
@@ -53,6 +54,7 @@
 /home/pavan/android_project/TechoCall/platforms/android/ant-build/classes/com/techostic/techocall/DialerActivity$1$1.class \
 /home/pavan/android_project/TechoCall/platforms/android/ant-build/classes/com/techostic/techocall/R.class \
 /home/pavan/android_project/TechoCall/platforms/android/ant-build/classes/com/techostic/techocall/PhoneStateChangeActivity.class \
+/home/pavan/android_project/TechoCall/platforms/android/ant-build/classes/com/techostic/techocall/webinterface/DialerInterface.class \
 /home/pavan/android_project/TechoCall/platforms/android/ant-build/classes/com/techostic/techocall/DialerActivity$3.class \
 /home/pavan/android_project/TechoCall/platforms/android/ant-build/classes/com/techostic/techocall/DialerActivity.class \
 /home/pavan/android_project/TechoCall/platforms/android/ant-build/classes/com/techostic/techocall/R$string.class \

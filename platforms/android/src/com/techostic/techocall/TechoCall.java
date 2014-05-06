@@ -36,8 +36,8 @@ public class TechoCall extends CordovaActivity
         super.init();
         // Set by <content src="index.html" /> in config.xml
         
-        Intent i = new Intent(getApplicationContext(), PhoneCallMonitorService.class);
-        getApplicationContext().startService(i);
+       /* Intent i = new Intent(getApplicationContext(), PhoneCallMonitorService.class);
+        getApplicationContext().startService(i);*/
         
         super.loadUrl(Config.getStartUrl());
         

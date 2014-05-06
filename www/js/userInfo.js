@@ -4,10 +4,10 @@ var userInfo = (function (){
     var userName;
     var userNumbers = [];
     
-    var elem = $('#content');
+    var elem = $('#workarea');
     
     var loadTemplate = function (def) {
-        if(elem.length === 0) elem = $('#content');
+        if(elem.length === 0) elem = $('#workarea');
         var promise = moduleLoader.loadModule('userInfo');
         
         promise.done(function (data){

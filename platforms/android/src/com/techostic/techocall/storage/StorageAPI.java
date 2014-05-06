@@ -13,7 +13,11 @@ public interface StorageAPI {
 	
 	public Long getContactIDByPhoneNumber(String phoneNumber);
 	
-	public List<Remainder> getAllRemaindersByID(long contactID);
+	public Contact getContactById(long contactID);
+	
+	public List<Remainder> getAllRemaindersByContactID(long contactID);
+	
+	public List<Remainder> getAllPendingRemaindersByContactID(long contactID);
 	
 	public boolean addRemainder(Remainder remainder);
 	

@@ -59,6 +59,14 @@ var registeredContacts = (function (){
         techoStorage.getAllContacts(loadContactInfoSuccess,loadContactInfoError,[]);
     };
     
+    var updateSidebar = function () {
+        var upperStack = ['A' , 'D'];
+        var bottomStack = ['S' , 'Q'];
+        
+        $('body').trigger('updateTopStack' , [upperStack]);
+        $('body').trigger('updateBottomStack' , [bottomStack]);
+    };
+    
     var attachEventHandlers = function () {
         
         $('body').on(configuartion.events.userselect , '.contact' , function (event){
@@ -72,9 +80,9 @@ var registeredContacts = (function (){
             
             var photo = target.find('img').attr('src');
             
-            $('body').trigger('showUser' , [id,name , photo]);
+            //$('body').trigger('showUser' , [id,name , photo]);
             
-            
+            $('body').trigger('showRemainders', [id]);
         });
     };
     
@@ -82,6 +90,8 @@ var registeredContacts = (function (){
         
         $('body').trigger('headerMiddle',['Techo Call']);
         $('body').trigger('headerRight',['+','getAllContacts']);// local event
+        
+        updateSidebar();
         
         var def = new $.Deferred();
         loadTemplate(def);

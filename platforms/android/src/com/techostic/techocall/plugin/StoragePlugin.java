@@ -181,7 +181,7 @@ public class StoragePlugin extends CordovaPlugin {
 				List<Remainder> remainderList = null;
 				try {
 					
-					remainderList = storageAPIImpl.getAllRemaindersByID(Long.parseLong(args.getString(0)));
+					remainderList = storageAPIImpl.getAllRemaindersByContactID(Long.parseLong(args.getString(0)));
 					
 					if(remainderList == null){
 						callbackContext.error("An error occured");

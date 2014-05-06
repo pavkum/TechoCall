@@ -46,7 +46,7 @@ public class StorageAPIImpl implements StorageAPI {
 	}
 	
 	@Override
-	public List<Remainder> getAllRemaindersByID(long contactID) {
+	public List<Remainder> getAllRemaindersByContactID(long contactID) {
 		return remainderSQLiteHelper.getAllRemaindersByID(contactID);
 	}
 
@@ -70,6 +70,18 @@ public class StorageAPIImpl implements StorageAPI {
 	@Override
 	public boolean deleteRemainder(List<Long> remainderIDs) {
 		return remainderSQLiteHelper.deleteRemainder(remainderIDs);
+	}
+
+	@Override
+	public Contact getContactById(long contactID) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Remainder> getAllPendingRemaindersByContactID(long contactID) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	

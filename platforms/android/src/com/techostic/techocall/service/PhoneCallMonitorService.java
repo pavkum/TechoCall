@@ -1,9 +1,7 @@
 package com.techostic.techocall.service;
 
-import android.app.AlertDialog;
 import android.app.Service;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.IBinder;
 import android.telephony.PhoneStateListener;
@@ -61,8 +59,7 @@ public class PhoneCallMonitorService extends Service {
 	}
 	
 	private void showDialer(String incomingNumber){
-		Log.v(TELEPHONY_SERVICE, "call received");
-		System.out.println("here" + incomingNumber);
+		
 		Long contactID = storageAPIImpl.getContactIDByPhoneNumber(incomingNumber);
 		
 		

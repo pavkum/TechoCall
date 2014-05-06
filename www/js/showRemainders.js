@@ -1,5 +1,5 @@
 var showAndRemainders = (function (){
-    var elem = $('#content');
+    var elem = $('#workarea');
     
     var template = $("<div class='remainderItem'> <div class='remainderMessagePreview'> </div>" +
                     "<div class='remainderStatus'> <div class='statusIcon'> </div>  </div> " +
@@ -8,7 +8,7 @@ var showAndRemainders = (function (){
     
     var loadTemplate = function (def , contactID) {
         //if(elem.length === 0) elem = $('#content');
-        elem = $('#content');
+        elem = $('#workarea');
         var promise = moduleLoader.loadModule('showRemainders');
         
         promise.done(function (data){
@@ -51,6 +51,13 @@ var showAndRemainders = (function (){
         }
     };
     
+    var updateSidebar = function () {
+        var upperStack = ['Ar' , 'Ui' , 'De'];
+                
+        $('body').trigger('updateTopStack' , [upperStack]);
+        
+    };
+    
     var loadRemaindersError = function (error){
         
         $('#error').show();  
@@ -63,6 +70,11 @@ var showAndRemainders = (function (){
     
     $('body').on('showRemainders',function (event,contactID){
         var def = new $.Deferred();
+        
+        $('body').trigger('addToHistory',['showTechoContacts']);
+        
+        updateSidebar();
+        
         loadTemplate(def , contactID);
         
         def.done(function (contactID){

@@ -13,4 +13,6 @@ public interface RemainderAPI {
 	public boolean updateRemainder(Remainder remainder);
 	
 	public boolean deleteRemainder(List<Long> remainderIDs);
+	
+	public List<Remainder> getAllPendingRemaindersByContactID(long contactID);
 } 

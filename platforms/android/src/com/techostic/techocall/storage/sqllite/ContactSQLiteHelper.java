@@ -91,6 +91,11 @@ public class ContactSQLiteHelper extends SQLiteOpenHelper implements ContactAPI 
 		SQLiteDatabase db = null;
 		
 		try{
+			
+			if(getContactById(contact.getContactID()) != null){
+				return true;
+			}
+			
 			db = this.getWritableDatabase();
 			
 			ContentValues values = new ContentValues();
@@ -108,6 +113,12 @@ public class ContactSQLiteHelper extends SQLiteOpenHelper implements ContactAPI 
 			
 		}catch(Exception e){
 			Log.d(DATABASE_NAME + " : " + DATABASE_VERSION, "Error occured while creating contact "+contact + " : " + e.getMessage());
+		}finally{
+			if(db != null){
+				if(db.isOpen()){
+					db.close();
+				}
+			}
 		}
 		
 		return false;
@@ -142,10 +153,18 @@ public class ContactSQLiteHelper extends SQLiteOpenHelper implements ContactAPI 
 				//empty
 			}
 			
+			db.close();
+			
 			return contactList;
 			
 		}catch(Exception e){
 			Log.d(DATABASE_NAME + " : " + DATABASE_VERSION, "Error occured while getting all contacts : " + e.getMessage());
+		}finally{
+			if(db != null){
+				if(db.isOpen()){
+					db.close();
+				}
+			}
 		}
 		
 		return null;
@@ -170,10 +189,60 @@ public class ContactSQLiteHelper extends SQLiteOpenHelper implements ContactAPI 
 				contactID = cursor.getLong(0);
 			}
 			
+			db.close();
+			
 			return contactID;
 			
 		}catch(Exception e){
 			Log.d(DATABASE_NAME	+ " : " + DATABASE_VERSION, "Error occured while getting contactID by phonenumber : "+phoneNumber + " : "+e.getMessage());
+		}finally{
+			if(db != null){
+				if(db.isOpen()){
+					db.close();
+				}
+			}
+		}
+		
+		return null;
+	}
+
+	@Override
+	public Contact getContactById(long contactID) {
+		SQLiteDatabase db = null;
+		
+		try{
+			
+			db = this.getReadableDatabase();
+			
+			String where[] = {contactID + ""};
+			 
+			Cursor cursor = db.query(TABLE_NAME_CONTACT, null, CONTACT_ID + " = ? ", where, null, null, null);
+			
+			Contact contact = null;
+			
+			if(cursor.moveToFirst()){
+				
+				contact = new Contact();
+				
+				contact.setContactID(cursor.getLong(0));
+				contact.setFullName(cursor.getString(1));
+				contact.setPhotoURL(cursor.getString(2));
+				contact.setPhoneNumber(cursor.getString(3));
+				
+			}
+			
+			db.close();
+			
+			return contact;
+			
+		}catch(Exception e){
+			Log.d(DATABASE_NAME	+ " : " + DATABASE_VERSION, "Error occured while getting contact by contactID : "+contactID + " : "+e.getMessage());
+		}finally{
+			if(db != null){
+				if(db.isOpen()){
+					db.close();
+				}
+			}
 		}
 		
 		return null;

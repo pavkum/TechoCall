@@ -4,10 +4,86 @@
   initialize = function() {
     var elem;
     elem = $('#dialer');
-    $(window).height(50);
-    return elem.text('Hello man');
+    //$(window).height(50);
+    //return elem.text('Hello man : ' + window.location.hash);
   };
+    
+  var user = function (data) {
+        alert(data);  
+  };
+    
   $(document).ready(function (){
     initialize();
   });
+    
+    
 })(jQuery);
+
+var updateData = function (data) {
+    
+    /*var data = {
+        name : 'Pavan Kumar L' ,
+        message : ['This is a message' , 'Call them all' , 'Its working']
+    }*/
+    
+    var index = 0;
+    
+    $('.name').text(data.name);
+    
+    if(data.message && data.message.length > 0){
+        $('.left').show();
+        $('.right').show();    
+        
+        $('.message').text(data.message[index]);
+        
+        $('.right').on('click' , function (){
+            if((index + 1) < data.message.length) {
+                index = index + 1;
+                $('.message').text(data.message[index]);
+                
+                if((index + 1) === data.message.length){
+                    $('.right').addClass('disabled');   
+                }
+                
+                if($('.left').hasClass('disabled')){
+                    $('.left').removeClass('disabled');
+                }
+            }
+        });
+        
+        $('.left').on('click' , function (){
+            if((index - 1) >= 0){
+                index = index - 1; 
+                $('.message').text(data.message[index]);
+                
+                if(index === 0){
+                    $('.left').addClass('disabled');   
+                }
+                if($('.right').hasClass('disabled')){
+                    $('.right').removeClass('disabled');
+                }
+            }
+        });
+        
+        $('.left').addClass('disabled');   
+        
+    }else if(data.message && data.message.length === 0) {
+        $('.message').text(data.message[index]);
+    }else{
+        // shouldn't come here
+        $('.message').text('No remainder');
+    }
+    
+    
+    
+}
+
+updateData();
+
+var user = function (data) {
+    
+    
+    console.log(data);
+    var elem = $('#dialer');
+    elem.text(data);
+};

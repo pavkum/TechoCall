@@ -65,8 +65,10 @@ $(document).on('deviceready',function (){
     // load all at once - no AMD
     $('body').trigger('headerReady');
     $('body').trigger('RegisteredContactsReady');
-    $('body').trigger('RegisteredUserReady');
+    //$('body').trigger('RegisteredUserReady');
     $('body').trigger('ContactsReady');
+    
+    $('body').trigger('initializeSidebar');
     
     //alert(window.devicePixelRatio + " : " + window.height + " : " + $('header').height());
 });

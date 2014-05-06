@@ -242,7 +242,7 @@ var contacts = (function (){
     });
     
     var addContactSuccess = function (contact) {
-        $('body').trigger('showUser',[contact.id , contact.displayName]);
+        $('body').trigger('showRemainders',[contact.id , contact.displayName]);
     };
     
     var addContactError = function (error) {

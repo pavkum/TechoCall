@@ -109,10 +109,18 @@ public class RemainderSQLiteHelper extends SQLiteOpenHelper implements Remainder
 				// empty
 			}
 			
+			db.close();
+			
 			return remainderList;
 			
 		}catch(Exception e){
 			Log.d(DATABASE_NAME + " : " + DATABASE_VERSION, "An error occured while retriving remainder list for contact ID : "+userID + " : " + e.getMessage());
+		}finally{
+			if(db != null){
+				if(db.isOpen()){
+					db.close();
+				}
+			}
 		}
 		
 		return null;
@@ -139,12 +147,16 @@ public class RemainderSQLiteHelper extends SQLiteOpenHelper implements Remainder
 			
 			db.close();
 			
-			
-			
 			return true;
 			
 		}catch(Exception e){
 			Log.d(DATABASE_NAME + " : " + DATABASE_VERSION, "Error occured while creating Remainder "+remainder + " : " + e.getMessage());
+		}finally{
+			if(db != null){
+				if(db.isOpen()){
+					db.close();
+				}
+			}
 		}
 		return false;
 	}
@@ -178,6 +190,12 @@ public class RemainderSQLiteHelper extends SQLiteOpenHelper implements Remainder
 			
 		}catch(Exception e){
 			Log.d(DATABASE_NAME + " : " + DATABASE_VERSION, "Error occured while updating Remainder "+remainder + " : " + e.getMessage());
+		}finally{
+			if(db != null){
+				if(db.isOpen()){
+					db.close();
+				}
+			}
 		}
 		return false;
 	}
@@ -203,9 +221,62 @@ public class RemainderSQLiteHelper extends SQLiteOpenHelper implements Remainder
 			
 		}catch(Exception e){
 			Log.d(DATABASE_NAME + " : " + DATABASE_VERSION, "Error occured while deleting Remainder "+remainderIDs + " : " + e.getMessage());
+		
+		}finally{
+			if(db != null){
+				if(db.isOpen()){
+					db.close();
+				}
+			}
 		}
 		
 		return false;
+	}
+
+	@Override
+	public List<Remainder> getAllPendingRemaindersByContactID(long contactID) {
+		SQLiteDatabase db = null;
+		
+		try{
+			
+			db = this.getReadableDatabase();
+			
+			String columns[] = {REMAINDER_ID , CONTACT_ID , REMAINDER_MESSAGE};
+			String selectionArgs[] = {contactID + ""};
+			
+			Cursor cursor = db.query(TABLE_NAME, columns, CONTACT_ID + " = ? ", selectionArgs, null, null, null);
+			
+			List<Remainder> remainderList = new ArrayList<Remainder>();
+			Remainder remainder = null;
+			
+			if(cursor.moveToFirst()){
+				do {
+					remainder = new Remainder();
+					
+					remainder.setRemainderID(cursor.getLong(0));
+					remainder.setContactID(cursor.getLong(1));
+					remainder.setRemainderMessage(cursor.getString(2));
+					
+					remainderList.add(remainder);
+					
+				}while(cursor.moveToNext());
+			}
+			
+			db.close();
+			
+			return remainderList;
+			
+		}catch(Exception e){
+			Log.d(DATABASE_NAME + " : " + DATABASE_VERSION, "Error occured while getting pending remainders for contact ID "+contactID + " : " + e.getMessage());
+		}finally{
+			if(db != null){
+				if(db.isOpen()){
+					db.close();
+				}
+			}
+		}
+		
+		return null;
 	}
 
 }

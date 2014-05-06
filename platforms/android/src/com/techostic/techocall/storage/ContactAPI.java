@@ -11,4 +11,6 @@ public interface ContactAPI {
 	public List<Contact> getAllContacts();
 
 	public Long getContactIDByPhoneNumber(String phoneNumber);
+	
+	public Contact getContactById(long contactID);
 }

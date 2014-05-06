@@ -1,6 +1,6 @@
 var note = (function (){
 
-    var elem = $('#content');
+    var elem = $('#workarea');
     var contactId = undefined;
     var isNew = false;
     var remainder = undefined;
@@ -23,7 +23,7 @@ var note = (function (){
     
     $('body').on('note' ,  function (event , id , createMode , remainderObj){
         if(elem.length === 0)
-            elem = $('#content');
+            elem = $('#workarea');
         
         contactId = id;
         isNew = createMode;
