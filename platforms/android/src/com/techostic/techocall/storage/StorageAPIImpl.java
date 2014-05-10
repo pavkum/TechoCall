@@ -74,14 +74,12 @@ public class StorageAPIImpl implements StorageAPI {
 
 	@Override
 	public Contact getContactById(long contactID) {
-		// TODO Auto-generated method stub
-		return null;
+		return contactSQLiteHelper.getContactById(contactID);
 	}
 
 	@Override
 	public List<Remainder> getAllPendingRemaindersByContactID(long contactID) {
-		// TODO Auto-generated method stub
-		return null;
+		return remainderSQLiteHelper.getAllPendingRemaindersByContactID(contactID);
 	}
 
 	

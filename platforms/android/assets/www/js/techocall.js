@@ -2,12 +2,16 @@ var techocall = (function (){
 
     var historyList = [];
     
+    var headerHeight = 0;
+    
     var initialize = function () {
         
         var width = $(window).width();
         var height = $(window).height();
         
         var displayHeight = $('header').outerHeight();
+        
+        headerHeight = $('header').height();
         
         var workarea = $('#workarea');
         
@@ -53,6 +57,13 @@ var techocall = (function (){
     });
     
     initialize();
+    
+    $(window).on('resize' , function (event){
+        event.preventDefault();
+        event.stopImmediatePropagation();
+        $('header').height(headerHeight);
+        return false;
+    });
 });
 //$(document).ready(function (){
 $(document).on('deviceready',function (){

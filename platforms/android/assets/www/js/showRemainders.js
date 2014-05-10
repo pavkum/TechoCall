@@ -52,9 +52,26 @@ var showAndRemainders = (function (){
     };
     
     var updateSidebar = function () {
-        var upperStack = ['Ar' , 'Ui' , 'De'];
+        
+        var template = $('<div></div>');
+        
+        var addNewRemainder = template.clone().text('Ar').css('background-color' , '#16a085');
+        
+        addNewRemainder.on(configuartion.events.userselect , function (){
+            $('#dummyInput').trigger(configuartion.events.userselect);
+        });
+        
+        var showUserInfo = template.clone().text('Ui').css('background-color' , '#F9BF3B');
+        showUserInfo.on(configuartion.events.userselect , function (){
+            $('body').trigger('toUserInfo');
+        });
+        
+        var deleteSelectedRemainder = template.clone().text('De').css('background-color' , '#D91E18');
+        
+        var upperStack = [addNewRemainder , showUserInfo , deleteSelectedRemainder];
                 
         $('body').trigger('updateTopStack' , [upperStack]);
+        
         
     };
     
@@ -68,10 +85,12 @@ var showAndRemainders = (function (){
         techoStorage.getAllRemaindersById(loadRemaindersSuccess, loadRemaindersError, [contactID]);
     };
     
-    $('body').on('showRemainders',function (event,contactID){
+    $('body').on('showRemainders',function (event , contactID , displayName , photo , phoneNumber){
         var def = new $.Deferred();
         
         $('body').trigger('addToHistory',['showTechoContacts']);
+        $('body').trigger('headerMiddle' , [displayName]);
+        $('body').trigger('headerRight' , ['<img src="' + photo+ '" height="100%" >']);
         
         updateSidebar();
         
@@ -79,31 +98,35 @@ var showAndRemainders = (function (){
         
         def.done(function (contactID){
             loadRemainders(contactID);
-            registerEvents(contactID);
+            registerEvents(contactID , displayName , photo , phoneNumber);
             //$('body').trigger('showNote'); // testing
         });
         
     });
     
-    var registerEvents = function (contactID) {
-        $('body').on('showNote',function (event , contactID , isNew , remainderObj){ // proxy to be called from other areas as per screen so that required info can be passed
+    var registerEvents = function (contactID , displayName , photo , phoneNumber) {
+        $('body').on('showNote',function (event , contactID , displayName , photo , isNew , remainderObj){ // proxy to be called from other areas as per screen so that required info can be passed
         
             $('#list').hide();
             $('#text').show();
             
-            $('body').trigger('note', [contactID , isNew , remainderObj]);
+            $('body').trigger('note', [contactID , displayName , photo , isNew , remainderObj]);
             
             $(this).off(event);
             
         });
         
         $('#dummyInput').on(configuartion.events.userselect , function (){
-            $('body').trigger('showNote' , [contactID , true]);
+            $('body').trigger('showNote' , [contactID , displayName , photo , true]);
         });
         
         $('.remainderItem').on(configuartion.events.userselect , function (event){
             var remainder = JSON.parse( $(event.currentTarget).data('remainder') );
-            $('body').trigger('showNote' , [contactID , false , remainder]);
+            $('body').trigger('showNote' , [contactID , displayName , photo , false , remainder]);
+        });
+        
+        $('body').on('toUserInfo' , function (){
+            $('body').trigger('userInfo' , [contactID , displayName , photo , phoneNumber]);
         });
     };
     

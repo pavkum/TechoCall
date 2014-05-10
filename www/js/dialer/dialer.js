@@ -20,17 +20,13 @@
 })(jQuery);
 
 var updateData = function (data) {
-    
-    /*var data = {
-        name : 'Pavan Kumar L' ,
-        message : ['This is a message' , 'Call them all' , 'Its working']
-    }*/
+    data = JSON.parse(data);
     
     var index = 0;
     
     $('.name').text(data.name);
     
-    if(data.message && data.message.length > 0){
+    if(data.message && data.message.length > 1){
         $('.left').show();
         $('.right').show();    
         
@@ -67,7 +63,7 @@ var updateData = function (data) {
         
         $('.left').addClass('disabled');   
         
-    }else if(data.message && data.message.length === 0) {
+    }else if(data.message && data.message.length === 1) {
         $('.message').text(data.message[index]);
     }else{
         // shouldn't come here
@@ -77,13 +73,3 @@ var updateData = function (data) {
     
     
 }
-
-updateData();
-
-var user = function (data) {
-    
-    
-    console.log(data);
-    var elem = $('#dialer');
-    elem.text(data);
-};

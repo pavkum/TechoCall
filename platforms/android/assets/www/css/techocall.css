@@ -64,8 +64,18 @@ header {
     }
     
     .sidebar {
-        top : 24px; 
+        top : 0px; 
         left: 0;
+        height: 100%;
+    }
+    
+    .sidebarElem {
+        height: 24px; 
+        line-height: 24px;
+    }
+    
+    .stack {
+        top:24px;   
     }
 }
 
@@ -80,8 +90,18 @@ header {
     }
     
     .sidebar {
-        top : 36px; 
+        top : 0px; 
         left: 0;
+        height: 100%;
+    }
+    
+    .sidebarElem {
+        height: 32px; 
+        line-height: 32px;
+    }
+    
+    .stack {
+        top:36px;   
     }
 }
 
@@ -95,8 +115,18 @@ header {
     }
     
     .sidebar {
-        top : 45px; 
+        top : 0px; 
         left: 0;
+        height: 100%;
+    }
+    
+    .sidebarElem {
+        height: 48px; 
+        line-height: 48px;
+    }
+    
+    .stack {
+        top:45px;   
     }
 }
 
@@ -110,8 +140,18 @@ header {
     }
     
     .sidebar {
-        top : 54px; 
+        top : 0px; 
         left: 0;
+        height: 100%;
+    }
+    
+    .sidebarElem {
+        height: 60px; 
+        line-height: 60px;
+    }
+    
+    .stack {
+        top:54px;   
     }
 }
 
@@ -125,8 +165,18 @@ header {
     }  
     
     .sidebar {
-        top : 60px; 
+        top : 0px; 
         left: 0;
+        height: 100%;
+    }
+    
+    .sidebarElem {
+        height: 72px; 
+        line-height: 72px;
+    }
+    
+    .stack {
+        top:60px;   
     }
 }
 
@@ -140,8 +190,18 @@ header {
     }
     
     .sidebar {
-        top : 67.5px; 
+        top : 0px; 
         left: 0;
+        height: 100%;
+    }
+    
+    .sidebarElem {
+        height: 80px; 
+        line-height: 80px;
+    }
+    
+    .stack {
+        top:67.5px;   
     }
 }
 
@@ -153,11 +213,16 @@ header {
      header {
         height: 72px;   
     }
-    
-    .sidebar {
-        top : 72px; 
-        left: 0;
+        
+    .sidebarElem {
+        height: 90px; 
+        line-height: 90px;
     }
+    
+    .stack {
+        top:72px;   
+    }
+    
 }
 
 @media screen and (min-height : 960px) {
@@ -195,14 +260,18 @@ header {
     }
     
     .sidebar {
-        top : 96px; 
+        top : 0px; 
         left: 0;
-        height: 100%; <!-- 1280 - 1280 * 0.1125 - 120 -->
+        height: 100%;
     }
     
     .sidebarElem {
         height: 120px; 
         line-height: 120px;
+    }
+    
+    .stack {
+        top:96px;   
     }
 }
 
@@ -216,9 +285,18 @@ header {
     }
     
     .sidebar {
-        top : 120px; 
+        top : 0px; 
         left: 0;
-        height: 1276px;
+        height: 100%;
+    }
+    
+    .sidebarElem {
+        height: 128px; 
+        line-height: 128px;
+    }
+    
+    .stack {
+        top:120px;   
     }
 }
 
@@ -232,8 +310,18 @@ header {
     }
     
     .sidebar {
-        top : 144px; 
+        top : 0px; 
         left: 0;
+        height: 100%;
+    }
+    
+    .sidebarElem {
+        height: 160px; 
+        line-height: 160px;
+    }
+    
+    .stack {
+        top:144px;   
     }
 }
 
@@ -247,8 +335,18 @@ header {
     }
     
     .sidebar {
-        top : 144px; 
+        top : 0px; 
         left: 0;
+        height: 100%;
+    }
+    
+    .sidebarElem {
+        height: 192px; 
+        line-height: 192px;
+    }
+    
+    .stack {
+        top:144px;   
     }
 }
 
@@ -327,9 +425,10 @@ header table, header td {
 }
 
 .sidebar {
+    
     width:15%;
     position:absolute;
-    opacity:0.85;
+    opacity:0.70;
     background-color: transparent;
     margin:0;
     padding:0;
@@ -353,6 +452,7 @@ header table, header td {
 .stack {
     width: 100%;
     background:#DADFE1;
+    background: #151515;
     position: absolute;
 }
 

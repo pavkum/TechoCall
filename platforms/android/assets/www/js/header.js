@@ -10,7 +10,7 @@ var header = (function (){
     
     var initialize = function () {
         //logo.html('C') // will be replaced by icon of size as per device density
-        updateMiddleColumn('Techo Call');
+        updateMiddleColumn('Next Time');
         updateRightColumn('+','getAllContacts');
         
         logo.on(configuartion.events.userselect,function (){
@@ -30,7 +30,6 @@ var header = (function (){
         if(eventName){
             rightColumn.on(configuartion.events.userselect,function(){
                 $('body').trigger(eventName);
-                
             });
         }
     };

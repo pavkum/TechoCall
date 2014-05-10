@@ -156,6 +156,8 @@ var contacts = (function (){
             
             filterResult('No Result');
             
+            $('#contact').focus();
+            
             $('body').on(configuartion.events.userselect, '.row' ,function (event){
                 var target = $(event.target);
                 
@@ -172,7 +174,7 @@ var contacts = (function (){
             $('#contact').keyup(function (event){
                 var val = event.target.value;
                 clearResults(); 
-                if(val.length != 0){
+                if(val.length != 0 && val.length >= 3){
                     filterResult('Loading...','loading');
                     getAllContacts(val);    
                 }else{

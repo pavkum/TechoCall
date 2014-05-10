@@ -60,6 +60,7 @@ public class PhoneStateChangeActivity extends BroadcastReceiver{
 			
 	        
 			Contact contact = storageAPIImpl.getContactById(contactID);
+			
 			List<Remainder> remainderList = storageAPIImpl.getAllPendingRemaindersByContactID(contact.getContactID());
 			
 			contact.setRemainders(remainderList);
@@ -73,7 +74,7 @@ public class PhoneStateChangeActivity extends BroadcastReceiver{
 				JSONArray jsonArray = new JSONArray();
 				
 				for(int i=0; i<remainderList.size(); i++){
-					jsonArray.put(remainderList.get(i));
+					jsonArray.put(remainderList.get(i).getRemainderMessage());
 				}
 				
 				jsonObject.put("message", jsonArray);

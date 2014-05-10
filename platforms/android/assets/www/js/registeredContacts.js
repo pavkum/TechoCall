@@ -44,6 +44,8 @@ var registeredContacts = (function (){
             var photo = clone.find('img');
             photo.attr('src',contact.photo);
             
+            clone.data('phoneNumber' , contact.phoneNumber);
+            
             wrapper.append(clone);
             
             
@@ -58,10 +60,39 @@ var registeredContacts = (function (){
     var loadContactInfo = function () {
         techoStorage.getAllContacts(loadContactInfoSuccess,loadContactInfoError,[]);
     };
+
     
     var updateSidebar = function () {
-        var upperStack = ['A' , 'D'];
-        var bottomStack = ['S' , 'Q'];
+        
+        var template = $('<div></div>');
+
+        var addNewContact , deleteSelectedContacts;
+        
+        addNewContact = template.clone().text('A').css('background-color' , '#16a085');
+        addNewContact.on(configuartion.events.userselect , function (event){
+            $('body').trigger('getAllContacts');
+        });
+        
+        deleteSelectedContacts = template.clone().text('D').css('background-color' , '#D91E18');
+        deleteSelectedContacts.on(configuartion.events.userselect , function (event){
+            // not yet implemented
+        });
+/*
+    
+        var triggerEvent = function (eventName){
+            addNewContact.unbind(configuartion.events.userselect);
+            deleteSelectedContacts.unbind(configuartion.events.userselect);
+            
+            $('body').trigger(eventName);
+            
+        };
+*/
+        
+        var settings = template.clone().text('S').css('background-color' , '#1E8BC3');
+        var quit = template.clone().text('Q').css('background-color' , '#F22613');
+        
+        var upperStack = [addNewContact , deleteSelectedContacts];
+        var bottomStack = [settings , quit];
         
         $('body').trigger('updateTopStack' , [upperStack]);
         $('body').trigger('updateBottomStack' , [bottomStack]);
@@ -80,15 +111,17 @@ var registeredContacts = (function (){
             
             var photo = target.find('img').attr('src');
             
+            var phoneNumber = target.data('phoneNumber');
+            
             //$('body').trigger('showUser' , [id,name , photo]);
             
-            $('body').trigger('showRemainders', [id]);
+            $('body').trigger('showRemainders', [id , name , photo , phoneNumber]);
         });
     };
     
     $('body').on('showTechoContacts',function (){
         
-        $('body').trigger('headerMiddle',['Techo Call']);
+        $('body').trigger('headerMiddle',['Next Time']);
         $('body').trigger('headerRight',['+','getAllContacts']);// local event
         
         updateSidebar();

@@ -32,16 +32,16 @@ var userInfo = (function (){
         });
     };
     
-    $('body').on('userInfo',function (event,user){
+    $('body').on('userInfo',function (event, id, name , photo , phoneNumber){
         var def = new $.Deferred();
         loadTemplate(def);
 
         // sample data
         
         user = {};
-        user.name = "Pavan Kumar L";
-        user.numbers = [7760968318];
-        user.img = "https://scontent-b-cdg.xx.fbcdn.net/hphotos-prn2/t1.0-9/1458566_768090913201444_94017057_n.jpg";
+        user.name = name;
+        user.numbers = phoneNumber;
+        user.img = photo;
         
         def.done(function (){
             adjust(user);   

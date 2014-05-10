@@ -21,13 +21,46 @@ var note = (function (){
         //$('#note').height(height*0.4);
     };
     
-    $('body').on('note' ,  function (event , id , createMode , remainderObj){
+    var updateSideBar = function (mode) {
+        var template = $('<div></div>');
+
+        var upperStack = [];
+        
+        if(mode === 'new') {
+            
+            var saveRemainder = template.clone().text('Sa').css('background-color' , '#16a085');
+            upperStack = [saveRemainder];
+            
+        }else if(mode === 'edit'){
+            
+            var editRemainder = template.clone().text('Ed').css('background-color' , '#16a085');
+            var deleteRemainder = template.clone().text('De').css('background-color' , '#D91E18');
+            
+            upperStack = [editRemainder , deleteRemainder];
+            
+        }else{ // update mode
+            
+            var updateRemainder = template.clone().text('Up').css('background-color' , '#16a085');
+            var deleteRemainder = template.clone().text('De').css('background-color' , '#D91E18');
+            
+            upperStack = [updateRemainder , deleteRemainder];
+            
+        }
+               
+        $('body').trigger('updateTopStack' , [upperStack]);  
+    };
+    
+    $('body').on('note' ,  function (event , id  , displayName , photo , createMode , remainderObj){
         if(elem.length === 0)
             elem = $('#workarea');
+        
+        $('body').trigger('addToHistory',['showRemainders' , [id , displayName , photo]]);
         
         contactId = id;
         isNew = createMode;
         remainder = remainderObj;
+        
+        
         
         var def = new $.Deferred();
         loadTemplate(def);
@@ -36,6 +69,9 @@ var note = (function (){
             //showNote();
             
             if(isNew) {
+                
+                updateSideBar('new');
+                
                 $('#delete').hide();
                 
                 $('#edit').hide();
@@ -44,6 +80,9 @@ var note = (function (){
                 $('#cancel').show();
             
             }else{
+                
+                updateSideBar('edit');
+                
                 $('#delete').show();
                 
                 $('#edit').show();
@@ -117,8 +156,14 @@ var note = (function (){
     
     $('body').on(configuartion.events.userselect, '#cancel' , function (){
         if(isNew) {
+            
+            updateSideBar('new');
+            
             $('body').trigger('showRemainders' , [contactId]);
         }else{
+            
+            updateSideBar('edit');
+            
             $('#edit').show();
                 
             $('#saveOrUpdate').hide();
@@ -129,6 +174,9 @@ var note = (function (){
     });
     
     $('body').on(configuartion.events.userselect, '#edit' , function (){
+        
+        updateSideBar('update');
+        
         $('#edit').hide();
                 
         $('#saveOrUpdate').text('Update').show();
