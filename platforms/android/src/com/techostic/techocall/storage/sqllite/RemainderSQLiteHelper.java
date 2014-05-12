@@ -242,9 +242,11 @@ public class RemainderSQLiteHelper extends SQLiteOpenHelper implements Remainder
 			db = this.getReadableDatabase();
 			
 			String columns[] = {REMAINDER_ID , CONTACT_ID , REMAINDER_MESSAGE};
-			String selectionArgs[] = {contactID + ""};
+			String selectionArgs[] = {contactID + "" };
 			
-			Cursor cursor = db.query(TABLE_NAME, columns, CONTACT_ID + " = ? ", selectionArgs, null, null, null);
+			
+			
+			Cursor cursor = db.query(TABLE_NAME, columns, CONTACT_ID + " = ? and " + IS_REMAINDED + " = 0", selectionArgs, null, null, null);
 			
 			List<Remainder> remainderList = new ArrayList<Remainder>();
 			Remainder remainder = null;

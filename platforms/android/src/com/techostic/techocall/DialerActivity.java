@@ -1,14 +1,10 @@
 package com.techostic.techocall;
 
-import org.apache.cordova.CordovaActivity;
-
-import com.techostic.techocall.webinterface.DialerInterface;
-
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.MotionEvent;
-import android.view.WindowManager;
 import android.view.WindowManager.LayoutParams;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
@@ -65,7 +61,7 @@ public class DialerActivity extends Activity {
 		
 		final String jsonData = this.getIntent().getStringExtra("json");
 		
-		wv.addJavascriptInterface(new DialerInterface(this), "Android");
+		//wv.addJavascriptInterface(new DialerInterface(this), "Android");
 		
 		wv.setWebViewClient(new WebViewClient() {
 		    @Override
@@ -87,6 +83,29 @@ public class DialerActivity extends Activity {
 		this.setContentView(wv);
 		this.getWindow().setGravity(Gravity.TOP);
 		
+	}
+	
+	
+	@Override
+	protected void onNewIntent(Intent intent) {
+		super.onNewIntent(intent);
+		System.out.println("extra intent added");
+		if(intent.getStringExtra("finish") != null){
+			System.out.println("finish called");
+			finish();
+		}
+		
+	}
+	
+	@Override
+	public void finish() {
+		/*super.finish();
+		
+		StorageAPI storageAPIImpl = StorageAPIImpl.getInstance(this);
+		
+		final String jsonData = this.getIntent().getStringExtra("json");
+		
+		*/
 	}
 	
 	@Override
