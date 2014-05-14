@@ -20,6 +20,12 @@
 })(jQuery);
 
 var updateData = function (data) {
+
+    $('#close').on('touchstart' , function (){
+        console.log('finsih');
+        Android.finish();
+    });
+
     data = JSON.parse(data);
     
     var index = 0;

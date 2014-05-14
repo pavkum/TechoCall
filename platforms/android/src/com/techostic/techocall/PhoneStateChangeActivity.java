@@ -66,6 +66,13 @@ public class PhoneStateChangeActivity extends BroadcastReceiver{
 		if(this.dialerIntent != null){
 			this.dialerIntent.putExtra("finish", "finish");
 			
+			// temporary solution
+			DialerActivity dialerActivity = DialerActivity.getInstance();
+			
+			if(dialerActivity != null){
+				dialerActivity.finish();
+			}
+			
 			this.dialerIntent = null;
 			
 			for(int i=0; i<this.remainderList.size(); i++){
@@ -127,8 +134,6 @@ public class PhoneStateChangeActivity extends BroadcastReceiver{
 			dialerIntent = new Intent(context, DialerActivity.class); 
 			
 			dialerIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-			dialerIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-			dialerIntent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
 			dialerIntent.putExtra("contactID", contactID);
 			dialerIntent.putExtra("json", jsonObject.toString());
 			

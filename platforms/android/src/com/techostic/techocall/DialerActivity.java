@@ -10,8 +10,16 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
+import com.techostic.techocall.webinterface.DialerInterface;
+
 public class DialerActivity extends Activity {
 
+	
+	private static DialerActivity dialerActivity = null;
+	
+	public static DialerActivity getInstance() {
+		return dialerActivity;
+	}
 	
 	/*public void onCreate1(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -39,6 +47,9 @@ public class DialerActivity extends Activity {
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
+		
+		DialerActivity.dialerActivity = this;
+		
 		super.onCreate(savedInstanceState);
 			
 		this.getWindow().addFlags(LayoutParams.FLAG_NOT_TOUCH_MODAL);   
@@ -61,7 +72,7 @@ public class DialerActivity extends Activity {
 		
 		final String jsonData = this.getIntent().getStringExtra("json");
 		
-		//wv.addJavascriptInterface(new DialerInterface(this), "Android");
+		wv.addJavascriptInterface(new DialerInterface(this), "Android");
 		
 		wv.setWebViewClient(new WebViewClient() {
 		    @Override
@@ -98,14 +109,10 @@ public class DialerActivity extends Activity {
 	}
 	
 	@Override
-	public void finish() {
-		/*super.finish();
-		
-		StorageAPI storageAPIImpl = StorageAPIImpl.getInstance(this);
-		
-		final String jsonData = this.getIntent().getStringExtra("json");
-		
-		*/
+	protected void onDestroy() {
+		System.out.println("being destroyed");
+		DialerActivity.dialerActivity = null;
+		super.onDestroy();
 	}
 	
 	@Override

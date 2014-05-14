@@ -1,5 +1,6 @@
 package com.techostic.techocall.webinterface;
 
+import android.app.Activity;
 import android.content.Context;
 import android.webkit.JavascriptInterface;
 
@@ -16,6 +17,11 @@ public class DialerInterface {
 	@JavascriptInterface
 	public void getUserProfile(String contactID){
 		
+	}
+	
+	public void finish(){
+		System.out.println("context finish");
+		((Activity) this.context).finish();
 	}
 	
 }
