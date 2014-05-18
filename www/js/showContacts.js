@@ -135,7 +135,7 @@ var contacts = (function (){
         $('body').trigger('addToHistory',['showTechoContacts']);
         
         $('body').trigger('headerMiddle',['Add Contact']);
-        $('body').trigger('headerRight',['D','toUser']);// local event
+        $('body').trigger('headerRight',['<img src="img/next.png" />','toUser']);// local event
         
         loadTemplate(def);
         
@@ -228,12 +228,15 @@ var contacts = (function (){
         clone.data('phoneNumber' , JSON.stringify(phones));
         clone.text(data);
         
+        var src ;
+        
         if(photos && photos[0]){
-            var src = photos[0].value;
-            clone.append('<img src="' +src + ' " height="100%"   />');   
+            src = photos[0].value;
             
+        }else{
+            src = "img/photo.jpg";
         }
-            
+        clone.append('<img src="' +src + ' " height="100%"   />');   
         search.append(clone);
     };
     
@@ -262,7 +265,7 @@ var contacts = (function (){
         var phoneNumber = $('#contact').data('phoneNumber');
         
         if(!photo){
-            photo = 'img/logo.png';
+            photo = 'img/photo.jpg';
         }
         
         var contact = {

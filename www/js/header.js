@@ -51,7 +51,7 @@ var header = (function (){
     
     $('body').on('headerRight',function (event,data,eventName){
         updateRightColumn(data,eventName);
-        Logger.info('photo ',data);
+        
     });
     
 });

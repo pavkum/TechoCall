@@ -64,16 +64,18 @@ var registeredContacts = (function (){
     
     var updateSidebar = function () {
         
-        var template = $('<div></div>');
+        var template = $('<div><img height="70%"  style="position:relative;top:15%"/></div>');
 
         var addNewContact , deleteSelectedContacts;
         
-        addNewContact = template.clone().text('A').css('background-color' , '#16a085');
+        
+        
+        addNewContact = template.clone().find('img').attr('src' , 'img/contacts.png');
         addNewContact.on(configuartion.events.userselect , function (event){
             $('body').trigger('getAllContacts');
         });
         
-        deleteSelectedContacts = template.clone().text('D').css('background-color' , '#D91E18');
+        deleteSelectedContacts = template.clone().clone().find('img').attr('src' , 'img/trash.png');//.css('background-color' , '#D91E18');
         deleteSelectedContacts.on(configuartion.events.userselect , function (event){
             // not yet implemented
         });
@@ -88,8 +90,8 @@ var registeredContacts = (function (){
         };
 */
         
-        var settings = template.clone().text('S').css('background-color' , '#1E8BC3');
-        var quit = template.clone().text('Q').css('background-color' , '#F22613');
+        var settings = template.clone().find('img').attr('src' , 'img/settings.png');//.css('background-color' , '#1E8BC3');
+        var quit = template.clone().find('img').attr('src' , 'img/shutdown.png');//.css('background-color' , '#F22613');
         
         var upperStack = [addNewContact , deleteSelectedContacts];
         var bottomStack = [settings , quit];
@@ -122,7 +124,7 @@ var registeredContacts = (function (){
     $('body').on('showTechoContacts',function (){
         
         $('body').trigger('headerMiddle',['Next Time']);
-        $('body').trigger('headerRight',['+','getAllContacts']);// local event
+        $('body').trigger('headerRight',['<img src="img/contacts.png" />','getAllContacts']);// local event
         
         updateSidebar();
         

@@ -53,20 +53,20 @@ var showAndRemainders = (function (){
     
     var updateSidebar = function () {
         
-        var template = $('<div></div>');
+        var template = $('<div><img height="70%"  style="position:relative;top:15%"/></div>');
         
-        var addNewRemainder = template.clone().text('Ar').css('background-color' , '#16a085');
+        var addNewRemainder = template.clone().find('img').attr('src' , 'img/notepad.png');
         
         addNewRemainder.on(configuartion.events.userselect , function (){
             $('#dummyInput').trigger(configuartion.events.userselect);
         });
         
-        var showUserInfo = template.clone().text('Ui').css('background-color' , '#F9BF3B');
+        var showUserInfo = template.clone().find('img').attr('src' , 'img/userinfo.png');
         showUserInfo.on(configuartion.events.userselect , function (){
             $('body').trigger('toUserInfo');
         });
         
-        var deleteSelectedRemainder = template.clone().text('De').css('background-color' , '#D91E18');
+        var deleteSelectedRemainder = template.clone().find('img').attr('src' , 'img/trash.png');
         
         var upperStack = [addNewRemainder , showUserInfo , deleteSelectedRemainder];
                 

@@ -50,7 +50,18 @@ header {
     background:#36D7B7;
     font-size:125%;
     z-index: 2;
-    
+    clear: both;
+}
+
+header > * {
+    box-sizing: border-box;   
+}
+
+header > div {
+    float: left;
+    text-align: center;
+    color: white;
+    font-weight: bold;
 }
 
 @media screen and (min-height : 240px) {
@@ -61,6 +72,10 @@ header {
     
     header {
         height: 24px;   
+    }
+    
+    header > div {
+        line-height: 24px;   
     }
     
     .sidebar {
@@ -89,6 +104,10 @@ header {
         height: 36px;   
     }
     
+    header > div {
+        line-height: 36px;   
+    }
+    
     .sidebar {
         top : 0px; 
         left: 0;
@@ -112,6 +131,10 @@ header {
     
     header {
         height: 45px;   
+    }
+    
+    header > div {
+        line-height: 45px;   
     }
     
     .sidebar {
@@ -139,6 +162,10 @@ header {
         height:54px;
     }
     
+    header > div {
+        line-height: 54px;   
+    }
+    
     .sidebar {
         top : 0px; 
         left: 0;
@@ -163,6 +190,10 @@ header {
     header {
         height: 60px;   
     }  
+    
+    header > div {
+        line-height: 60px;   
+    }
     
     .sidebar {
         top : 0px; 
@@ -189,6 +220,10 @@ header {
         height: 67.5px;   
     }
     
+    header > div {
+        line-height: 67.5px;   
+    }
+    
     .sidebar {
         top : 0px; 
         left: 0;
@@ -213,7 +248,11 @@ header {
      header {
         height: 72px;   
     }
-        
+    
+    header > div {
+        line-height: 72px;   
+    }
+    
     .sidebarElem {
         height: 90px; 
         line-height: 90px;
@@ -232,6 +271,10 @@ header {
     
     header {
         height: 90px;   
+    }
+    
+    header > div {
+        line-height: 90px;   
     }
     
     .sidebar {
@@ -259,6 +302,10 @@ header {
         height: 96px;   
     }
     
+    header > div {
+        line-height: 96px;   
+    }
+    
     .sidebar {
         top : 0px; 
         left: 0;
@@ -282,6 +329,10 @@ header {
     
     header {
         height: 120px;   
+    }
+    
+    header > div {
+        line-height: 120px;   
     }
     
     .sidebar {
@@ -309,6 +360,10 @@ header {
         height: 144px;  
     }
     
+    header > div {
+        line-height: 144px;   
+    }
+    
     .sidebar {
         top : 0px; 
         left: 0;
@@ -334,6 +389,10 @@ header {
         height: 144px;   
     }
     
+    header > div {
+        line-height: 144px;   
+    }
+    
     .sidebar {
         top : 0px; 
         left: 0;
@@ -351,7 +410,6 @@ header {
 }
 
 
-
 #backbutton {
     width:10%;
     font-weight:normal;
@@ -366,50 +424,20 @@ header {
     
 }
 
+
 #rightColumn > img {
+    vertical-align: middle;
     position:relative;
-    top:12.5%;
-    height:75%;
+    height: 70%;
     border-radius:100%;
-}
-
-.headerBorderLeft {
-    
-    border-left:1px solid #00ADE7;
-    border-left:1px solid #049372;
-}
-
-.headerBorderLeft:focus {
-    outline:none;
-}
-
-
-
-.headerBorderRight:focus {
-    outline:none;
-}
-
-header table, header td {
-    border-spacing:1px;
-    //border-collapse:collapse;
-    text-align:center;
-    color:white;
-    
-    font-weight:bold;
-}
-
-
-.headerBorderRight {
-    padding: 2px;
-    border-right: :1px solid #049372;
 }
 
 #workarea {
     width:100%;
-    //padding:1% 2%;
     
     overflow-y:auto;
-    /*background:#FAFAFA;*/
+    background: #FAFAFA;
+    background-color: #EEEEEE;
 }
 
 .message {
@@ -428,11 +456,12 @@ header table, header td {
     
     width:15%;
     position:absolute;
-    opacity:0.70;
+    opacity:0.9;
     background-color: transparent;
     margin:0;
     padding:0;
     border-right: 0px solid #1A1A1A;
+    box-shadow: 2px 2px 5px 5px solid #848484;
 }
     
 .sidebarElem {
@@ -451,8 +480,10 @@ header table, header td {
 
 .stack {
     width: 100%;
-    background:#DADFE1;
-    background: #151515;
+    background: #2E2E2E;
+    background-color: #FAFAFA;
+    box-shadow: 2px 2px 5px 5px solid #848484;
+    border-right: 1px solid #848484;
     position: absolute;
 }
 

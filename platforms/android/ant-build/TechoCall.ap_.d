@@ -53,9 +53,934 @@
 /home/pavan/android_project/TechoCall/platforms/android/assets/www/templates/showRemainders.html \
 /home/pavan/android_project/TechoCall/platforms/android/assets/www/templates/registeredContacts.html \
 /home/pavan/android_project/TechoCall/platforms/android/assets/www/templates/note.html \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/shutdown.png \
 /home/pavan/android_project/TechoCall/platforms/android/assets/www/img/logo.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/note.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/delete.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/trash.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/userinfo.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/shutdown transparent.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/shutdown128.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/notepad.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/next.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/addContact.jpg \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/contacts.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/photo.jpg \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/settings.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/user.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/pen.png \
 /home/pavan/android_project/TechoCall/platforms/android/assets/www/img/glyphicons \
 /home/pavan/android_project/TechoCall/platforms/android/assets/www/img/white \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512 \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24 \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256 \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20 \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64 \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128 \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16 \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48 \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32 \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185086 - map streamline user.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185052 - paint bucket streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185041 - arrow streamline target.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185055 - painting pallet streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185087 - link streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185104 - streamline umbrella weather.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185107 - backpack streamline trekking.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185025 - ibook laptop.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185049 - design pencil rule streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185040 - map pin streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185026 - laptop macbook streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185113 - coffee streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185023 - computer imac.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185078 - email mail streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185027 - computer network streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185024 - computer imac.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185109 - cocktail mojito streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185085 - happy smiley streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185031 - shoes snickers streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185118 - japan streamline tea.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185054 - painting roll streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185096 - settings streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185100 - caddie shop shopping streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185036 - remote control streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185080 - bubble love streamline talk.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185090 - delete garbage streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185117 - food ice cream streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185111 - monocle mustache streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185048 - pen streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185050 - eye dropper streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185099 - factory lift streamline warehouse.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185058 - grid lines streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185101 - caddie shopping streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185079 - bubble comment streamline talk.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185042 - edit modify streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185065 - frame picture streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185102 - receipt shopping streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185114 - chef food restaurant streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185030 - cook pan pot streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185072 - book read streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185067 - camera streamline video.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185022 - computer macintosh vintage.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185103 - bag shopping streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185075 - envellope mail streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185047 - pen streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185028 - iphone streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185115 - barbecue eat food streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185088 - lock locker streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185071 - music speaker streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185073 - book dowload streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185093 - dashboard speed streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185112 - barista coffee espresso streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185045 - pen streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185083 - like love streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185097 - database streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185066 - picture streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185057 - magic magic wand streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185070 - micro record streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185116 - eat food hotdog streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185076 - streamline suitcase travel.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185108 - chaplin hat movie streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185046 - design graphic tablet streamline tablet.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185081 - speech streamline talk user.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185098 - streamline sync.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185032 - ipad streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185074 - notebook streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185051 - crop streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185063 - camera photo polaroid streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185110 - diving leisure sea sport streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185119 - eat food fork knife streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185069 - headset sound streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185035 - computer streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185077 - first aid medecine shield streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185094 - settings streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185039 - earth globe streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185044 - pen streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185091 - danger death delete destroy skull streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185059 - handle streamline vector.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185020 - macintosh.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/user.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185061 - photo pictures streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185034 - ipod mini music streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185092 - clock streamline time.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185106 - armchair chair streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185038 - home house streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185029 - ipod streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185037 - browser streamline window.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185105 - drug medecine streamline syringue.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185089 - locker streamline unlock.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185064 - picture streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185095 - settings streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185056 - stamp streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185033 - ipod music streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185084 - crown king streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185053 - brush paint streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185021 - bomb bug.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185060 - magnet streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185062 - camera photo streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185068 - music note streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/512/185043 - ink pen streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185086 - map streamline user.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185052 - paint bucket streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185041 - arrow streamline target.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185055 - painting pallet streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185087 - link streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185104 - streamline umbrella weather.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185107 - backpack streamline trekking.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185025 - ibook laptop.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185049 - design pencil rule streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185040 - map pin streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185026 - laptop macbook streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185113 - coffee streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185023 - computer imac.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185078 - email mail streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185027 - computer network streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185024 - computer imac.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185109 - cocktail mojito streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185085 - happy smiley streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185031 - shoes snickers streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185118 - japan streamline tea.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185054 - painting roll streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185096 - settings streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185100 - caddie shop shopping streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185036 - remote control streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185080 - bubble love streamline talk.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185090 - delete garbage streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185117 - food ice cream streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185111 - monocle mustache streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185048 - pen streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185050 - eye dropper streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185099 - factory lift streamline warehouse.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185058 - grid lines streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185101 - caddie shopping streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185079 - bubble comment streamline talk.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185042 - edit modify streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185065 - frame picture streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185102 - receipt shopping streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185114 - chef food restaurant streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185030 - cook pan pot streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185072 - book read streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185067 - camera streamline video.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185022 - computer macintosh vintage.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185103 - bag shopping streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185075 - envellope mail streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185047 - pen streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185028 - iphone streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185115 - barbecue eat food streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185088 - lock locker streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185071 - music speaker streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185073 - book dowload streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185093 - dashboard speed streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185112 - barista coffee espresso streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185045 - pen streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185083 - like love streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185097 - database streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185066 - picture streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185057 - magic magic wand streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185070 - micro record streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185116 - eat food hotdog streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185076 - streamline suitcase travel.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185108 - chaplin hat movie streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185046 - design graphic tablet streamline tablet.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185081 - speech streamline talk user.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185098 - streamline sync.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185032 - ipad streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185074 - notebook streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185051 - crop streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185063 - camera photo polaroid streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185110 - diving leisure sea sport streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185119 - eat food fork knife streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185069 - headset sound streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185035 - computer streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185077 - first aid medecine shield streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185094 - settings streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185082 - man people streamline user.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185039 - earth globe streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185044 - pen streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185091 - danger death delete destroy skull streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185059 - handle streamline vector.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185020 - macintosh.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185061 - photo pictures streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185034 - ipod mini music streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185092 - clock streamline time.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185106 - armchair chair streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185038 - home house streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185029 - ipod streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185037 - browser streamline window.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185105 - drug medecine streamline syringue.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185089 - locker streamline unlock.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185064 - picture streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185095 - settings streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185056 - stamp streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185033 - ipod music streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185084 - crown king streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185053 - brush paint streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185021 - bomb bug.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185060 - magnet streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185062 - camera photo streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185068 - music note streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/24/185043 - ink pen streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185086 - map streamline user.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185052 - paint bucket streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185041 - arrow streamline target.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185055 - painting pallet streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185087 - link streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185104 - streamline umbrella weather.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185107 - backpack streamline trekking.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185025 - ibook laptop.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185049 - design pencil rule streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185040 - map pin streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185026 - laptop macbook streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185113 - coffee streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185023 - computer imac.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185078 - email mail streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185027 - computer network streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185024 - computer imac.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185109 - cocktail mojito streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185085 - happy smiley streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185031 - shoes snickers streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185118 - japan streamline tea.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185054 - painting roll streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185096 - settings streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185100 - caddie shop shopping streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185036 - remote control streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185080 - bubble love streamline talk.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185090 - delete garbage streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185117 - food ice cream streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185111 - monocle mustache streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185048 - pen streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185050 - eye dropper streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185099 - factory lift streamline warehouse.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185058 - grid lines streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185101 - caddie shopping streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185079 - bubble comment streamline talk.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185042 - edit modify streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185065 - frame picture streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185102 - receipt shopping streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185114 - chef food restaurant streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185030 - cook pan pot streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185072 - book read streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185067 - camera streamline video.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185022 - computer macintosh vintage.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185103 - bag shopping streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185075 - envellope mail streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185047 - pen streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185028 - iphone streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185115 - barbecue eat food streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185088 - lock locker streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185071 - music speaker streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185073 - book dowload streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185093 - dashboard speed streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185112 - barista coffee espresso streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185045 - pen streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185083 - like love streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185097 - database streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185066 - picture streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185057 - magic magic wand streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185070 - micro record streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185116 - eat food hotdog streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185076 - streamline suitcase travel.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185108 - chaplin hat movie streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185046 - design graphic tablet streamline tablet.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185081 - speech streamline talk user.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185098 - streamline sync.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185032 - ipad streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185074 - notebook streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185051 - crop streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185063 - camera photo polaroid streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185110 - diving leisure sea sport streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185119 - eat food fork knife streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185069 - headset sound streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185035 - computer streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185077 - first aid medecine shield streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185094 - settings streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185082 - man people streamline user.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185039 - earth globe streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185044 - pen streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185091 - danger death delete destroy skull streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185059 - handle streamline vector.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185020 - macintosh.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185061 - photo pictures streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185034 - ipod mini music streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185092 - clock streamline time.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185106 - armchair chair streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185038 - home house streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185029 - ipod streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185037 - browser streamline window.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185105 - drug medecine streamline syringue.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185089 - locker streamline unlock.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185064 - picture streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185095 - settings streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185056 - stamp streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185033 - ipod music streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185084 - crown king streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185053 - brush paint streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185021 - bomb bug.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185060 - magnet streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185062 - camera photo streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185068 - music note streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/256/185043 - ink pen streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185086 - map streamline user.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185052 - paint bucket streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185041 - arrow streamline target.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185055 - painting pallet streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185087 - link streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185104 - streamline umbrella weather.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185107 - backpack streamline trekking.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185025 - ibook laptop.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185049 - design pencil rule streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185040 - map pin streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185026 - laptop macbook streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185113 - coffee streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185023 - computer imac.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185078 - email mail streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185027 - computer network streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185024 - computer imac.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185109 - cocktail mojito streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185085 - happy smiley streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185031 - shoes snickers streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185118 - japan streamline tea.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185054 - painting roll streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185096 - settings streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185100 - caddie shop shopping streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185036 - remote control streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185080 - bubble love streamline talk.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185090 - delete garbage streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185117 - food ice cream streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185111 - monocle mustache streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185048 - pen streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185050 - eye dropper streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185099 - factory lift streamline warehouse.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185058 - grid lines streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185101 - caddie shopping streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185079 - bubble comment streamline talk.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185042 - edit modify streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185065 - frame picture streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185102 - receipt shopping streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185114 - chef food restaurant streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185030 - cook pan pot streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185072 - book read streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185067 - camera streamline video.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185022 - computer macintosh vintage.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185103 - bag shopping streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185075 - envellope mail streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185047 - pen streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185028 - iphone streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185115 - barbecue eat food streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185088 - lock locker streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185071 - music speaker streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185073 - book dowload streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185093 - dashboard speed streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185112 - barista coffee espresso streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185045 - pen streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185083 - like love streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185097 - database streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185066 - picture streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185057 - magic magic wand streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185070 - micro record streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185116 - eat food hotdog streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185076 - streamline suitcase travel.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185108 - chaplin hat movie streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185046 - design graphic tablet streamline tablet.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185081 - speech streamline talk user.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185098 - streamline sync.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185032 - ipad streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185074 - notebook streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185051 - crop streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185063 - camera photo polaroid streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185110 - diving leisure sea sport streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185119 - eat food fork knife streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185069 - headset sound streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185035 - computer streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185077 - first aid medecine shield streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185094 - settings streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185082 - man people streamline user.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185039 - earth globe streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185044 - pen streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185091 - danger death delete destroy skull streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185059 - handle streamline vector.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185020 - macintosh.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185061 - photo pictures streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185034 - ipod mini music streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185092 - clock streamline time.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185106 - armchair chair streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185038 - home house streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185029 - ipod streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185037 - browser streamline window.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185105 - drug medecine streamline syringue.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185089 - locker streamline unlock.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185064 - picture streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185095 - settings streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185056 - stamp streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185033 - ipod music streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185084 - crown king streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185053 - brush paint streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185021 - bomb bug.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185060 - magnet streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185062 - camera photo streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185068 - music note streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/20/185043 - ink pen streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185086 - map streamline user.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185052 - paint bucket streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185041 - arrow streamline target.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185055 - painting pallet streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185087 - link streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185104 - streamline umbrella weather.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185107 - backpack streamline trekking.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185025 - ibook laptop.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185049 - design pencil rule streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185040 - map pin streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185026 - laptop macbook streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185113 - coffee streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185023 - computer imac.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185078 - email mail streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185027 - computer network streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185024 - computer imac.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185109 - cocktail mojito streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185085 - happy smiley streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185031 - shoes snickers streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185118 - japan streamline tea.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185054 - painting roll streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185096 - settings streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185100 - caddie shop shopping streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185036 - remote control streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185080 - bubble love streamline talk.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185090 - delete garbage streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185117 - food ice cream streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185111 - monocle mustache streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185048 - pen streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185050 - eye dropper streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185099 - factory lift streamline warehouse.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185058 - grid lines streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185101 - caddie shopping streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185079 - bubble comment streamline talk.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185042 - edit modify streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185065 - frame picture streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185102 - receipt shopping streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185114 - chef food restaurant streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185030 - cook pan pot streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185072 - book read streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185067 - camera streamline video.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185022 - computer macintosh vintage.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185103 - bag shopping streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185075 - envellope mail streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185047 - pen streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185028 - iphone streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185115 - barbecue eat food streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185088 - lock locker streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185071 - music speaker streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185073 - book dowload streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185093 - dashboard speed streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185112 - barista coffee espresso streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185045 - pen streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185083 - like love streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185097 - database streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185066 - picture streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185057 - magic magic wand streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185070 - micro record streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185116 - eat food hotdog streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185076 - streamline suitcase travel.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185108 - chaplin hat movie streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185046 - design graphic tablet streamline tablet.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185081 - speech streamline talk user.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185098 - streamline sync.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185032 - ipad streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185074 - notebook streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185051 - crop streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185063 - camera photo polaroid streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185110 - diving leisure sea sport streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185119 - eat food fork knife streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185069 - headset sound streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185035 - computer streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185077 - first aid medecine shield streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185094 - settings streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185082 - man people streamline user.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185039 - earth globe streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185044 - pen streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185091 - danger death delete destroy skull streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185059 - handle streamline vector.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185020 - macintosh.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185061 - photo pictures streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185034 - ipod mini music streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185092 - clock streamline time.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185106 - armchair chair streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185038 - home house streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185029 - ipod streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185037 - browser streamline window.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185105 - drug medecine streamline syringue.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185089 - locker streamline unlock.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185064 - picture streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185095 - settings streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185056 - stamp streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185033 - ipod music streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185084 - crown king streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185053 - brush paint streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185021 - bomb bug.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185060 - magnet streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185062 - camera photo streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185068 - music note streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/64/185043 - ink pen streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185086 - map streamline user.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185052 - paint bucket streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185041 - arrow streamline target.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185055 - painting pallet streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185087 - link streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185104 - streamline umbrella weather.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185107 - backpack streamline trekking.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185025 - ibook laptop.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185049 - design pencil rule streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185040 - map pin streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185026 - laptop macbook streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185113 - coffee streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185023 - computer imac.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185078 - email mail streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185027 - computer network streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185024 - computer imac.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185109 - cocktail mojito streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185085 - happy smiley streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185031 - shoes snickers streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185118 - japan streamline tea.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185054 - painting roll streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185096 - settings streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185100 - caddie shop shopping streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185036 - remote control streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185080 - bubble love streamline talk.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185090 - delete garbage streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185117 - food ice cream streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185111 - monocle mustache streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185048 - pen streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185050 - eye dropper streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185099 - factory lift streamline warehouse.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185058 - grid lines streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185101 - caddie shopping streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185079 - bubble comment streamline talk.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185042 - edit modify streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185065 - frame picture streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185102 - receipt shopping streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185114 - chef food restaurant streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185030 - cook pan pot streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185072 - book read streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185067 - camera streamline video.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185022 - computer macintosh vintage.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185103 - bag shopping streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185075 - envellope mail streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185047 - pen streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185028 - iphone streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185115 - barbecue eat food streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185088 - lock locker streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185071 - music speaker streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185073 - book dowload streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185093 - dashboard speed streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185112 - barista coffee espresso streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185045 - pen streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185083 - like love streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185097 - database streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185066 - picture streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185057 - magic magic wand streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185070 - micro record streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185116 - eat food hotdog streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185076 - streamline suitcase travel.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185108 - chaplin hat movie streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185046 - design graphic tablet streamline tablet.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185081 - speech streamline talk user.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185098 - streamline sync.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185032 - ipad streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185074 - notebook streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185051 - crop streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185063 - camera photo polaroid streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185110 - diving leisure sea sport streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185119 - eat food fork knife streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185069 - headset sound streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185035 - computer streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185077 - first aid medecine shield streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185094 - settings streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185082 - man people streamline user.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185039 - earth globe streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185044 - pen streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185091 - danger death delete destroy skull streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185059 - handle streamline vector.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185020 - macintosh.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185061 - photo pictures streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185034 - ipod mini music streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185092 - clock streamline time.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185106 - armchair chair streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185038 - home house streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185029 - ipod streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185037 - browser streamline window.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185105 - drug medecine streamline syringue.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185089 - locker streamline unlock.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185064 - picture streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185095 - settings streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185056 - stamp streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185033 - ipod music streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185084 - crown king streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185053 - brush paint streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185021 - bomb bug.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185060 - magnet streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185062 - camera photo streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185068 - music note streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/128/185043 - ink pen streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185086 - map streamline user.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185052 - paint bucket streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185041 - arrow streamline target.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185055 - painting pallet streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185087 - link streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185104 - streamline umbrella weather.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185107 - backpack streamline trekking.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185025 - ibook laptop.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185049 - design pencil rule streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185040 - map pin streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185026 - laptop macbook streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185113 - coffee streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185023 - computer imac.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185078 - email mail streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185027 - computer network streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185024 - computer imac.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185109 - cocktail mojito streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185085 - happy smiley streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185031 - shoes snickers streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185118 - japan streamline tea.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185054 - painting roll streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185096 - settings streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185100 - caddie shop shopping streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185036 - remote control streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185080 - bubble love streamline talk.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185090 - delete garbage streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185117 - food ice cream streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185111 - monocle mustache streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185048 - pen streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185050 - eye dropper streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185099 - factory lift streamline warehouse.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185058 - grid lines streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185101 - caddie shopping streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185079 - bubble comment streamline talk.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185042 - edit modify streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185065 - frame picture streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185102 - receipt shopping streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185114 - chef food restaurant streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185030 - cook pan pot streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185072 - book read streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185067 - camera streamline video.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185022 - computer macintosh vintage.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185103 - bag shopping streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185075 - envellope mail streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185047 - pen streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185028 - iphone streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185115 - barbecue eat food streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185088 - lock locker streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185071 - music speaker streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185073 - book dowload streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185093 - dashboard speed streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185112 - barista coffee espresso streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185045 - pen streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185083 - like love streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185097 - database streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185066 - picture streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185057 - magic magic wand streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185070 - micro record streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185116 - eat food hotdog streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185076 - streamline suitcase travel.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185108 - chaplin hat movie streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185046 - design graphic tablet streamline tablet.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185081 - speech streamline talk user.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185098 - streamline sync.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185032 - ipad streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185074 - notebook streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185051 - crop streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185063 - camera photo polaroid streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185110 - diving leisure sea sport streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185119 - eat food fork knife streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185069 - headset sound streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185035 - computer streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185077 - first aid medecine shield streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185094 - settings streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185082 - man people streamline user.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185039 - earth globe streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185044 - pen streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185091 - danger death delete destroy skull streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185059 - handle streamline vector.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185020 - macintosh.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185061 - photo pictures streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185034 - ipod mini music streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185092 - clock streamline time.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185106 - armchair chair streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185038 - home house streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185029 - ipod streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185037 - browser streamline window.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185105 - drug medecine streamline syringue.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185089 - locker streamline unlock.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185064 - picture streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185095 - settings streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185056 - stamp streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185033 - ipod music streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185084 - crown king streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185053 - brush paint streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185021 - bomb bug.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185060 - magnet streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185062 - camera photo streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185068 - music note streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/16/185043 - ink pen streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185086 - map streamline user.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185052 - paint bucket streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185041 - arrow streamline target.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185055 - painting pallet streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185087 - link streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185104 - streamline umbrella weather.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185107 - backpack streamline trekking.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185025 - ibook laptop.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185049 - design pencil rule streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185040 - map pin streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185026 - laptop macbook streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185113 - coffee streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185023 - computer imac.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185078 - email mail streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185027 - computer network streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185024 - computer imac.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185109 - cocktail mojito streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185085 - happy smiley streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185031 - shoes snickers streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185118 - japan streamline tea.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185054 - painting roll streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185096 - settings streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185100 - caddie shop shopping streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185036 - remote control streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185080 - bubble love streamline talk.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185090 - delete garbage streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185117 - food ice cream streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185111 - monocle mustache streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185048 - pen streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185050 - eye dropper streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185099 - factory lift streamline warehouse.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185058 - grid lines streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185101 - caddie shopping streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185079 - bubble comment streamline talk.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185042 - edit modify streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185065 - frame picture streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185102 - receipt shopping streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185114 - chef food restaurant streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185030 - cook pan pot streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185072 - book read streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185067 - camera streamline video.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185022 - computer macintosh vintage.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185103 - bag shopping streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185075 - envellope mail streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185047 - pen streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185028 - iphone streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185115 - barbecue eat food streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185088 - lock locker streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185071 - music speaker streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185073 - book dowload streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185093 - dashboard speed streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185112 - barista coffee espresso streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185045 - pen streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185083 - like love streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185097 - database streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185066 - picture streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185057 - magic magic wand streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185070 - micro record streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185116 - eat food hotdog streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185076 - streamline suitcase travel.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185108 - chaplin hat movie streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185046 - design graphic tablet streamline tablet.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185081 - speech streamline talk user.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185098 - streamline sync.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185032 - ipad streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185074 - notebook streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185051 - crop streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185063 - camera photo polaroid streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185110 - diving leisure sea sport streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185119 - eat food fork knife streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185069 - headset sound streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185035 - computer streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185077 - first aid medecine shield streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185094 - settings streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185082 - man people streamline user.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185039 - earth globe streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185044 - pen streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185091 - danger death delete destroy skull streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185059 - handle streamline vector.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185020 - macintosh.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185061 - photo pictures streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185034 - ipod mini music streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185092 - clock streamline time.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185106 - armchair chair streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185038 - home house streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185029 - ipod streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185037 - browser streamline window.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185105 - drug medecine streamline syringue.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185089 - locker streamline unlock.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185064 - picture streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185095 - settings streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185056 - stamp streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185033 - ipod music streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185084 - crown king streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185053 - brush paint streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185021 - bomb bug.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185060 - magnet streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185062 - camera photo streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185068 - music note streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/48/185043 - ink pen streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185086 - map streamline user.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185052 - paint bucket streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185041 - arrow streamline target.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185055 - painting pallet streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185087 - link streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185104 - streamline umbrella weather.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185107 - backpack streamline trekking.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185025 - ibook laptop.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185049 - design pencil rule streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185040 - map pin streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185026 - laptop macbook streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185113 - coffee streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185023 - computer imac.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185078 - email mail streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185027 - computer network streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185024 - computer imac.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185109 - cocktail mojito streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185085 - happy smiley streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185031 - shoes snickers streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185118 - japan streamline tea.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185054 - painting roll streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185096 - settings streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185100 - caddie shop shopping streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185036 - remote control streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185080 - bubble love streamline talk.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185090 - delete garbage streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185117 - food ice cream streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185111 - monocle mustache streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185048 - pen streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185050 - eye dropper streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185099 - factory lift streamline warehouse.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185058 - grid lines streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185101 - caddie shopping streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185079 - bubble comment streamline talk.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185042 - edit modify streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185065 - frame picture streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185102 - receipt shopping streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185114 - chef food restaurant streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185030 - cook pan pot streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185072 - book read streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185067 - camera streamline video.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185022 - computer macintosh vintage.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185103 - bag shopping streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185075 - envellope mail streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185047 - pen streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185028 - iphone streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185115 - barbecue eat food streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185088 - lock locker streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185071 - music speaker streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185073 - book dowload streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185093 - dashboard speed streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185112 - barista coffee espresso streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185045 - pen streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185083 - like love streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185097 - database streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185066 - picture streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185057 - magic magic wand streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185070 - micro record streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185116 - eat food hotdog streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185076 - streamline suitcase travel.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185108 - chaplin hat movie streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185046 - design graphic tablet streamline tablet.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185081 - speech streamline talk user.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185098 - streamline sync.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185032 - ipad streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185074 - notebook streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185051 - crop streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185063 - camera photo polaroid streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185110 - diving leisure sea sport streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185119 - eat food fork knife streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185069 - headset sound streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185035 - computer streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185077 - first aid medecine shield streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185094 - settings streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185082 - man people streamline user.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185039 - earth globe streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185044 - pen streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185091 - danger death delete destroy skull streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185059 - handle streamline vector.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185020 - macintosh.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185061 - photo pictures streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185034 - ipod mini music streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185092 - clock streamline time.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185106 - armchair chair streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185038 - home house streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185029 - ipod streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185037 - browser streamline window.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185105 - drug medecine streamline syringue.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185089 - locker streamline unlock.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185064 - picture streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185095 - settings streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185056 - stamp streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185033 - ipod music streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185084 - crown king streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185053 - brush paint streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185021 - bomb bug.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185060 - magnet streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185062 - camera photo streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185068 - music note streamline.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/PNG/32/185043 - ink pen streamline.png \
 /home/pavan/android_project/TechoCall/platforms/android/assets/www/img/glyphicons/png \
 /home/pavan/android_project/TechoCall/platforms/android/assets/www/img/glyphicons/png/glyphicons_126_message_ban.png \
 /home/pavan/android_project/TechoCall/platforms/android/assets/www/img/glyphicons/png/glyphicons_226_euro.png \
