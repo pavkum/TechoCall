@@ -117,6 +117,8 @@ var registeredContacts = (function (){
             
             //$('body').trigger('showUser' , [id,name , photo]);
             
+            $('body').trigger('addToHistory',['showTechoContacts']);
+            
             $('body').trigger('showRemainders', [id , name , photo , phoneNumber]);
         });
     };

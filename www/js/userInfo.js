@@ -30,6 +30,12 @@ var userInfo = (function (){
             var parentWidth = img.parent().width();
             img.css('margin-left',(parentWidth - width)/2);
         });
+        
+        for(var i=0; i< user.numbers.length; i++){
+            var number = user.numbers[i];
+            
+            alert(number);
+        }
     };
     
     $('body').on('userInfo',function (event, id, name , photo , phoneNumber){
@@ -42,7 +48,7 @@ var userInfo = (function (){
         user.name = name;
         user.numbers = phoneNumber;
         user.img = photo;
-        
+        user = JSON.parse(user);
         def.done(function (){
             adjust(user);   
         });

@@ -500,3 +500,7 @@ header > div {
     bottom: 0;   
     
 }
+
+.clearfix {
+    clear: both;   
+}

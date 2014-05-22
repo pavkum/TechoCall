@@ -26,12 +26,15 @@ var techocall = (function (){
         historyList.push(historyObj);
         
         $('body').trigger('showBackButton');
+        
+        console.log("addToHistory" + historyObj);
     });
     
     $('body').on('triggerHistory' , function (){
         
         if(historyList.length > 0){
             var historyObj = historyList.pop();
+            console.log("triggerHistory" + historyObj);
             $('body').trigger(historyObj.eventName , historyObj.eventArgs);    
             
             if(historyList.length === 0) {

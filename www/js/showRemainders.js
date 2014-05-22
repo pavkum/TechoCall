@@ -88,7 +88,7 @@ var showAndRemainders = (function (){
     $('body').on('showRemainders',function (event , contactID , displayName , photo , phoneNumber){
         var def = new $.Deferred();
         
-        $('body').trigger('addToHistory',['showTechoContacts']);
+        
         $('body').trigger('headerMiddle' , [displayName]);
         $('body').trigger('headerRight' , ['<img src="' + photo+ '" height="100%" >']);
         
@@ -117,15 +117,24 @@ var showAndRemainders = (function (){
         });
         
         $('#dummyInput').on(configuartion.events.userselect , function (){
+            
+            $('body').trigger('addToHistory',['showRemainders' [contactID , displayName , photo , phoneNumber]]);
+            
             $('body').trigger('showNote' , [contactID , displayName , photo , true]);
         });
         
         $('.remainderItem').on(configuartion.events.userselect , function (event){
             var remainder = JSON.parse( $(event.currentTarget).data('remainder') );
+            
+            $('body').trigger('addToHistory',['showRemainders' [contactID , displayName , photo , phoneNumber]]);
+            
             $('body').trigger('showNote' , [contactID , displayName , photo , false , remainder]);
         });
         
         $('body').on('toUserInfo' , function (){
+            
+            $('body').trigger('addToHistory',['showRemainders' [contactID , displayName , photo , phoneNumber]]);
+            
             $('body').trigger('userInfo' , [contactID , displayName , photo , phoneNumber]);
         });
     };
