@@ -1,9 +1,10 @@
 var note = (function (){
 
     var elem = $('#workarea');
-    var contactId = undefined;
-    var isNew = false;
+    
     var remainder = undefined;
+    
+    var user = {};
     
     var loadTemplate = function (def) {
         var promise = moduleLoader.loadModule('note');
@@ -50,17 +51,14 @@ var note = (function (){
         $('body').trigger('updateTopStack' , [upperStack]);  
     };
     
-    $('body').on('note' ,  function (event , id  , displayName , photo , createMode , remainderObj){
+    $('body').on('note' ,  function (event , userObj){
         if(elem.length === 0)
             elem = $('#workarea');
         
-        $('body').trigger('addToHistory',['showRemainders' , [id , displayName , photo]]);
+        $('body').trigger('addToHistory',['showRemainders' , [userObj]]);
         
-        contactId = id;
-        isNew = createMode;
-        remainder = remainderObj;
-        
-        
+        user = JSON.parse(userObj);
+        remainder = user.remainder;
         
         var def = new $.Deferred();
         loadTemplate(def);
@@ -68,18 +66,7 @@ var note = (function (){
         def.done(function (){
             //showNote();
             
-            if(isNew) {
-                
-                updateSideBar('new');
-                
-                $('#delete').hide();
-                
-                $('#edit').hide();
-                
-                $('#saveOrUpdate').show();
-                $('#cancel').show();
-            
-            }else{
+            if(user.readOnly) {
                 
                 updateSideBar('edit');
                 
@@ -93,13 +80,24 @@ var note = (function (){
                 $('#note').attr('readonly' , true);
                 
                 $('#note').val(remainder.remainderMessage);
+            
+            }else{
+                updateSideBar('new');
+                
+                $('#delete').hide();
+                
+                $('#edit').hide();
+                
+                $('#saveOrUpdate').show();
+                $('#cancel').show();
+                
             }
         });
     });
     
     var saveSuccess = function (data) {
         
-        $('body').trigger('showRemainders' , [contactId]);
+        $('body').trigger('showRemainders' , [JSON.stringify(user)]);
     };
     
     var saveError = function (error) {
@@ -108,7 +106,7 @@ var note = (function (){
     
     var updateSuccess = function (data) {
         
-        $('body').trigger('showRemainders' , [contactId]);
+        $('body').trigger('showRemainders' , [JSON.stringify(user)]);
     };
     
     var updateError = function (error) {
@@ -117,7 +115,7 @@ var note = (function (){
     };
     
     var deleteSuccess = function (data) {
-        $('body').trigger('showRemainders' , [contactId]);
+        $('body').trigger('showRemainders' , [JSON.stringify(user)]);
     };
     
     var deleteError = function () {
@@ -127,11 +125,24 @@ var note = (function (){
     $('body').on(configuartion.events.userselect, '#saveOrUpdate' , function (){
         var content = $('#note').val();
         
-        if(isNew) {
+        if(user.readOnly) {
+            
+            remainderTemp = {};
+            remainderTemp.remainderId = remainder.remainderId;
+            remainderTemp.contactId = user.id;
+            
+            //remainderTemp.remainderType = remainder.remainderType;
+            
+            remainderTemp.remainderMessage = content;
+            
+            techoStorage.updateRemainder(updateSuccess , updateError , [remainderTemp]);
+            
+        }else{
+            
             remainder = {};
         
             remainder.remainderId = new Date().getTime();
-            remainder.contactId = contactId;    
+            remainder.contactId = user.id;    
             //only call or only message or both - 0 : all, 1 - only call, 2 - only message
             remainder.remainderType = 0;
         
@@ -139,29 +150,13 @@ var note = (function (){
             
             techoStorage.addRemainder(saveSuccess , saveError , [remainder]);
             
-        }else{
-            
-            remainderTemp = {};
-            remainderTemp.remainderId = remainder.remainderId;
-            remainderTemp.contactId = remainder.contactId;
-            
-            //remainderTemp.remainderType = remainder.remainderType;
-            
-            remainderTemp.remainderMessage = content;
-            
-            techoStorage.updateRemainder(updateSuccess , updateError , [remainderTemp]);
         }
         
     });
     
     $('body').on(configuartion.events.userselect, '#cancel' , function (){
-        if(isNew) {
-            
-            updateSideBar('new');
-            
-            $('body').trigger('showRemainders' , [contactId]);
-        }else{
-            
+        if(user.readOnly) {
+
             updateSideBar('edit');
             
             $('#edit').show();
@@ -170,6 +165,12 @@ var note = (function (){
             $('#cancel').hide();
             
             $('#note').attr('readonly' , true);
+            
+        }else{
+            updateSideBar('new');
+            
+            $('body').trigger('showRemainders' , [user]);
+
         }
     });
     

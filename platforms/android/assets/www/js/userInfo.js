@@ -4,7 +4,15 @@ var userInfo = (function (){
     var userName;
     var userNumbers = [];
     
+    var user = {};
+    
     var elem = $('#workarea');
+    
+    var template = $('<div class="number">' + 
+                     '<div class="msisdn"> </div>' +
+                     '<div class="type"> </div>' + 
+                     '<div class="clearfix"> </div>' + 
+                     '</div>');
     
     var loadTemplate = function (def) {
         if(elem.length === 0) elem = $('#workarea');
@@ -16,14 +24,14 @@ var userInfo = (function (){
         });
     };
 
-    var adjust = function (user) {
+    var adjust = function () {
         
         var name = elem.find('#name');
         name.css('line-height',name.height() + 'px');
         name.text(user.name);
         
         var img = elem.find('img'); // img has 2% margin
-        img.attr('src',user.img);
+        img.attr('src',user.photo);
         
         img.load(function () {
             var width = img.width();
@@ -31,26 +39,32 @@ var userInfo = (function (){
             img.css('margin-left',(parentWidth - width)/2);
         });
         
-        for(var i=0; i< user.numbers.length; i++){
-            var number = user.numbers[i];
+        var numbers = elem.find('#numbers');
+        
+        for(var i=0; i< user.phoneNumber.length; i++){
             
-            alert(number);
+            var clone = template.clone();
+            
+            var phoneNumber = user.phoneNumber[i];
+            
+            clone.find('.msisdn').text(phoneNumber.number);
+            clone.find('.type').text(phoneNumber.type);
+            
+            numbers.append(clone);
+            
         }
     };
     
-    $('body').on('userInfo',function (event, id, name , photo , phoneNumber){
+    $('body').on('userInfo',function (event, userObj){
         var def = new $.Deferred();
         loadTemplate(def);
 
+        user = JSON.parse(userObj);
+        
         // sample data
         
-        user = {};
-        user.name = name;
-        user.numbers = phoneNumber;
-        user.img = photo;
-        user = JSON.parse(user);
         def.done(function (){
-            adjust(user);   
+            adjust();   
         });
         
     });

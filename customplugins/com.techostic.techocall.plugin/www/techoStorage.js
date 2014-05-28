@@ -46,7 +46,25 @@ var techoStorage = {
         }catch(error){
             errorcallback('Please try again later');   
         }
-    }
+    },
+    
+    // settings
+    
+    updateSettings : function (successcallback, errorcallback, args) {
+        try{
+            exec(successcallback , errorcallback , 'techoStorage' , 'updateSettings' , args)
+        }catch(error) {
+            errorcallback('Failed to update preferences');   
+        }
+    },
+    
+    getSettings : function (successcallback, errorcallback, args) {
+        try{
+            exec(successcallback , errorcallback , 'techoStorage' , 'getSettings' , args)
+        }catch(error) {
+            errorcallback('Failed to obtain preferences');   
+        }
+    },
 };
 
 module.exports = techoStorage;

@@ -58,6 +58,7 @@ header > * {
 }
 
 header > div {
+    height: 100%;
     float: left;
     text-align: center;
     color: white;
@@ -421,7 +422,13 @@ header > div {
 #icon {
     width:89%;
     float:left;
-    
+}
+
+#icon > img {
+    vertical-align: middle;
+    position:relative;
+    height: 70%;
+    border-radius:100%;
 }
 
 
@@ -438,18 +445,6 @@ header > div {
     overflow-y:auto;
     background: #FAFAFA;
     background-color: #EEEEEE;
-}
-
-.message {
-    display:none;
-    width:100%;
-    text-align:center;
-    color:#848484;
-    font-size:90%;
-}
-
-#error {
-    color:red;   
 }
 
 .sidebar {
@@ -503,4 +498,17 @@ header > div {
 
 .clearfix {
     clear: both;   
+}
+
+.message {
+    padding: 0% 5%;
+    color: white;
+}
+
+.info {
+    background: #19B5FE;   
+}
+
+.error {
+    background: #F22613
 }

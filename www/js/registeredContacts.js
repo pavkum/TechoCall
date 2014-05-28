@@ -91,7 +91,14 @@ var registeredContacts = (function (){
 */
         
         var settings = template.clone().find('img').attr('src' , 'img/settings.png');//.css('background-color' , '#1E8BC3');
+        settings.on(configuartion.events.userselect , function (){
+            $('body').trigger('settings');
+        });
+        
         var quit = template.clone().find('img').attr('src' , 'img/shutdown.png');//.css('background-color' , '#F22613');
+        quit.on(configuartion.events.userselect , function (){
+            navigator.app.exitApp();
+        });
         
         var upperStack = [addNewContact , deleteSelectedContacts];
         var bottomStack = [settings , quit];
@@ -114,12 +121,20 @@ var registeredContacts = (function (){
             var photo = target.find('img').attr('src');
             
             var phoneNumber = target.data('phoneNumber');
-            
+            phoneNumber = JSON.parse(phoneNumber);
             //$('body').trigger('showUser' , [id,name , photo]);
             
             $('body').trigger('addToHistory',['showTechoContacts']);
             
-            $('body').trigger('showRemainders', [id , name , photo , phoneNumber]);
+            var user = {};
+            
+            user.id = id;
+            user.name = name;
+            user.photo = photo;
+            user.phoneNumber = phoneNumber;
+            
+            $('body').trigger('showRemainders', [JSON.stringify(user)]);
+            
         });
     };
     

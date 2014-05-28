@@ -1,92 +1,169 @@
-<!--
 <style>
-    .row {
-        border-bottom:1px solid #ddd;
-        clear:both;
-    }
     
     .wrapper {
-        padding:2% 5%;
-        clear:both;
-    }
-    
-    .image {
-        width:20%;
-        float:left;
-        overflow:hidden;
-    }
-    
-    .name {
-        width:80%;
-        float:left;
-        font-size:125%;
-        color:#0B173B;
-    }
-    
-    #message {
-        background:#FAFAFA;
-        font-size:125%;
-        color:#ddd;
-        text-align:center;
-    }
-    
-    .row:nth-child(odd) {
-        background:white;
-    }
-    
-    .row:nth-child(even) {
-        background:#FAFAFA;
-    }
-    
-</style>
-
-
-<div id="contacts">
-    <div id="clone" class="row" style="display:none">
-        <div class="wrapper">
-            <div class="image">
-                <img>
-            </div>
-            <div class="name"></div>
-            <div style="clear:both"></div>
-        </div>
-        <div style="clear:both"></div>
-    </div>
-</div>
-
-<div id="message" style="display:none">
-    
-</div>
-
--->
-
-<style>
-    .wrapper {
+        width:90%;
         padding:2% 5%;
     }
+
     
     #contact {
         width:90%;
-        padding:0 5%;
+        padding:0% 5%;
         border:1px solid #aaa;
-        font-size:125%;
+        font-size:150%;
         color:#848484;
     }
     
     #contact : focus {
         outline:none;   
     }
+
+    @media screen and (min-height : 240px) {
+        .name , .image , .msisdn , .type , .row , .message {
+            height: 20px;
+            line-height: 20px;
+        }
+        
+        #contact {
+            height: 20px;
+        }
+    }
+
+    @media screen and (min-height : 320px) {
+
+        .name , .image , .msisdn , .type , .row , .message {
+            height: 24px;
+            line-height: 24px;
+        }
+        
+        #contact {
+            height: 24px;
+        }
+    }
+
+    @media screen and (min-height : 480px) {
+        .name , .image , .msisdn , .type , .row , .message {
+            height: 32px;
+            line-height: 32px;
+        }
+        
+        #contact {
+            height: 32px;
+        }
+    }
+
+    @media screen and (min-height : 600px) {
+        .name , .image , .msisdn , .type , .row , .message {
+            height: 48px;
+            line-height: 48px;
+        }
+        
+        #contact {
+            height: 48px;
+        }
+    }
+
+    @media screen and (min-height : 720px) {
+        .name , .image , .msisdn , .type , .row , .message {
+            height: 60px;
+            line-height: 60px;
+        }
+        
+        #contact {
+            height: 60px;
+        }
+    }
+
+    @media screen and (min-height : 800px) {
+        .name , .image , .msisdn , .type , .row , .message {
+            height: 72px;
+            line-height: 72px;
+        }
+        
+        #contact {
+            height: 72px;
+        }
+    }
+
+    @media screen and (min-height : 900px) {
+        .name , .image , .msisdn , .type , .row , .message {
+            height: 80px;
+            line-height: 80px;
+        }
+        
+        #contact {
+            height: 80px;
+        }
+    }
+
+    @media screen and (min-height : 960px) {
+        .name , .image , .msisdn , .type , .row , .message {
+            height: 90px;
+            line-height: 90px;
+        }
+        
+        #contact {
+            height: 90px;
+        }
+    }
+
+    @media screen and (min-height : 1200px) {
+        .name , .image , .msisdn , .type , .row , .message {
+            height: 96px;
+            line-height: 96px;
+        }
+        
+        #contact {
+            height: 96px;
+        }
+    }
+
+    @media screen and (min-height : 1280px) {
+        .name , .image , .msisdn , .type , .row , .message {
+            height: 120px;
+            line-height: 120px;
+        }
+        
+        #contact {
+            height: 120px;
+        }
+    }
+
+    @media screen and (min-height : 1600px) {
+        .name , .image , .msisdn , .type , .row , .message {
+            height: 128px;
+            line-height: 128px;
+        }
+        
+        #contact {
+            height: 128px;
+        }
+    }
+
+    @media screen and (min-height : 1920px) {
+        .name , .image , .msisdn , .type , .row , .message {
+            height: 160px;
+            line-height: 160px;
+        }
+        
+        #contact {
+            height: 160px;
+        }
+    }
+
     
     .search {
         width:100%;
         margin:0 auto;
-        margin-top:5%;
+        margin-top: 5px;
         -moz-box-shadow: 0px 0px 1px #000000;
         -webkit-box-shadow: 0px 0px 1px #000000;
         box-shadow: 0px 0px 1px #000000;   
         
         overflow:auto;
         border:1px solid #F2F2F2;
+        
+        box-sizing: border-box;
     }
     
     .row {
@@ -94,7 +171,7 @@
         text-align:left;
         font-size:110%;
         color:#848484;
-        background:#FAFAFA;
+        background:white;
         border-bottom:1px solid #F2F2F2;
         
     }
@@ -107,6 +184,62 @@
         float:right;
     }
     
+    .message {
+        margin-top: 2%;  
+        color: white;
+    }
+    
+    .userInfo {
+        margin-top: 5%;  
+        display: none;
+    }
+    
+
+    .person {
+        background: white;   
+    }
+    
+    .name {
+        float: left;
+        padding: 0 5%;
+        width: 70%;
+        text-align: left;
+    }
+    
+    .image {
+        float: left;
+        width: 20%;
+        text-align: center;
+    }
+    
+    .image > img {
+        position: relative;
+        top: 10%;
+        height: 80%;
+        border-radius: 100%;   
+    }
+    
+    .number {
+        margin-top: 3px;   
+    }
+    
+    .msisdn {
+        float: left;
+        width: 70%;
+        border-right:2px solid #EEEEEE;
+        text-align: left;
+        background-color: white;
+        box-sizing: border-box;
+        padding: 0 5%;
+    }
+    
+    .type {
+        float: left;
+        width: 30%;
+        text-align: center;
+        background-color: white;
+    }
+    
 </style>
 
 <div class="wrapper">
@@ -115,6 +248,29 @@
         <input type="text" id="contact" placeholder="Contact">
     </div>
     
-    <div class="search"></div>
+    <div class="message info" style="display:none">
+        Press 3 letters to populate search
+    </div>
+    
+    <div id="search" class="search" style="display:none">
+        
+    </div>
+    
+    <div id="userInfo" class="userInfo">
+        <div class="person">
+            <div class="name"></div>
+            <div class="image">
+                <img />
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="number" >
+            <div id="numberClone" style="display:none">
+                <div class="msisdn"></div>
+                <div class="type"></div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
     
 </div>

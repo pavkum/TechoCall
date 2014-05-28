@@ -38,7 +38,7 @@ public class StoragePlugin extends CordovaPlugin {
 		final Contact contact = new Contact();
 
 		contact.setContactID(jsonContact.getLong("id"));
-		contact.setFullName(jsonContact.getString("displayName"));
+		contact.setFullName(jsonContact.getString("name"));
 		contact.setPhotoURL(jsonContact.getString("photo"));
 		contact.setPhoneNumber(jsonContact.getString("phoneNumber"));
 		

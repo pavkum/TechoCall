@@ -1,135 +1,49 @@
-/*var contacts = (function (){
-
+var contacts = (function (){
     var elem = $('#workarea');
+    var search = undefined;
+    var userInfo = undefined;
     
-    var template = undefined;
-    
-    var dummyElement = undefined;
+    // result structure
+    //var result = {};
+    /*result.name;
+    result.id;
+    result.photo;
+    result.phoneNumber;
+    */
+    var resultTemplate = $("<div class='row'></div>");
     
     var loadTemplate = function (def) {
         var promise = moduleLoader.loadModule('allContacts');
         
         promise.done(function (data){
             elem.html(data);
+            search = elem.find('#search');
+            userInfo = elem.find('#userInfo');
             def.resolve();
         });
         
         return def.promise();
     };
     
-    var getAllContacts = function() {
-        var options      = new ContactFindOptions();
-        options.multiple = true;
-        var fields       = ["*"];
-        navigator.contacts.find(fields, onSuccess, onError, options);    
-    };
-    
-    var message = function (text) {
-        var message = $('#message');
-        message.height(elem.height());
-        message.css('line-height',elem.height() + 'px');
-        message.text(text);
-        message.show();
-    };
-    
-    var onSuccess = function(contacts) {
-            if(contacts.length === 0){
-                message('Nothing to display');
-            }else{
-                message('Loading...');
-                var clone = $('#clone');
-                var contactsWrapper = $('#contacts');
-                
-                var size = elem.height() / 10 * 0.96;
-                
-                $('.image img').height(size);
-                $('.image img').width(size);
-                $('.image').height(size);
-                $('.image img').css('border-radius', size +'px');
-                
-                $('.name').css('line-height', size +'px');
-                
-                for(var i=0; i<contacts.length; i++){
-                    var newElem = clone.clone();
-                    
-                    if(contacts[i].photos){
-                    
-                        var imgURL = contacts[i].photos[0];
-                        
-                        //img.css('border-radius', elem.height() / 10 * 0.96 + 'px');
-                        var img = newElem.find('img');
-                        img.attr('src',imgURL);
-                    }
-                    var name = newElem.find('.name');
-                    name.text(contacts[i].displayName);
-                    
-                    var wrapper = newElem.find('.wrapper');
-                    wrapper.css('border-left','5px solid '+flatUIColors.getNextColors());
-                    
-                    contactsWrapper.append(newElem);
-                }
-                $('#message').hide();
-                $('.row').show();
-                //elem.html(dummyElement);
-            }
+    var keyboardFix = function () {
+        
+        var height = $('header').height();
+        
+        var subHeader = $('header > div');
+        subHeader.height(height);
+        subHeader.css('line-height' , height + 'px');
+        
+        $('#contact').height($('#contact').height());
+        
+        resultTemplate.height($('#contact').height());
+        resultTemplate.css('line-height' , $('#contact').height() + 'px');
+        
+        $('.message').height($('.message').height());
+        $('.message').css('line-height' , $('.message').height() + 'px');
         
     };
     
-    var onError = function(contactError) {
-        alert('onError!');
-    };
-    
-    $('body').on('getAllContacts',function (){
-        
-        $('body').trigger('headerMiddle',['Contacts']);
-        
-        var def = new $.Deferred ();
-        loadTemplate(def);
-        def.done(function (){
-            //getAllContacts(); 
-            
-            var c = {};
-            c.displayName = "Pavan";
-            
-            var ph = ['https://scontent-b-cdg.xx.fbcdn.net/hphotos-prn2/t1.0-9/1458566_768090913201444_94017057_n.jpg'];
-            c.photos = ph;
-            
-            var d = {};
-            d.displayName = "Pavan";
-            
-            var ph = ['https://scontent-b-cdg.xx.fbcdn.net/hphotos-prn2/t1.0-9/1458566_768090913201444_94017057_n.jpg'];
-            d.photos = ph;
-            
-            //onSuccess([c,d]);
-        });
-    });
-    
-});
-
-$('body').on('ContactsReady',function (event){
-    contacts();
-    $( this ).off( event ); // similar jquery one event
-});*/
-
-var contacts = (function (){
-    var parent = $('#workarea');
-    var elem = undefined;
-    var search = undefined;
-    
-    var resultTemplate = "<div class='row'> </div>";
-    
-    var loadTemplate = function (def) {
-        var promise = moduleLoader.loadModule('allContacts');
-        
-        promise.done(function (data){
-            parent.html(data);
-            def.resolve();
-        });
-        
-        return def.promise();
-    };
-    
-    var initialize = function () {
+    $('body').on('getAllContacts', function () {
         var def = new $.Deferred ();
         
         $('body').trigger('addToHistory',['showTechoContacts']);
@@ -137,53 +51,61 @@ var contacts = (function (){
         $('body').trigger('headerMiddle',['Add Contact']);
         $('body').trigger('headerRight',['<img src="img/next.png" />','toUser']);// local event
         
+        
         loadTemplate(def);
         
         def.done(function (){
-            elem = $('.wrapper');
-            elem.height(parent.height() * 0.96);
-            
-            var height = elem.height();
-            
-            search = $('.search');
-            search.css('max-height',height/10 * 5 + 'px');
-            
-            $('#contact').height(height / 10);
-            
-            resultTemplate = $(resultTemplate);
-            resultTemplate.css('line-height',height/10 + 'px');
-            resultTemplate.height(height/10)
-            
-            filterResult('No Result');
+        
+            keyboardFix();
+            elem.find('.message').show();
             
             $('#contact').focus();
             
-            $('body').on(configuartion.events.userselect, '.row' ,function (event){
-                var target = $(event.target);
+            setTimeout(function (){
+                $('#contact').focus();
+            },1000);
+            
+            // attach once event to message so that it hides itself when typing is started
+            
+            $('#contact').keydown(function (event){
+                $(this).off(event);
                 
-                if(target.attr('id')){
-                    $('#contact').val(target.text());
-                    $('#contact').data('contactID',target.attr('id'));
-                    $('#contact').data('phoneNumber' , target.data('phoneNumber'));
-                    var photo = target.find('img');
-                    if(photo.length != 0)
-                        $('#contact').data('photo',photo.attr('src'));
-                }
+                setTimeout(function(){
+                    elem.find('.message').hide(500);
+                    search.show()
+                }, 1500);
+                
             });
-            
-            $('#contact').keyup(function (event){
-                var val = event.target.value;
-                clearResults(); 
-                if(val.length != 0 && val.length >= 3){
-                    filterResult('Loading...','loading');
-                    getAllContacts(val);    
-                }else{
-                    filterResult('No Result','noresult');
-                }
-            });
-            
+        
         });
-    };
+    });
+    
+    $('body').on('focus' , '#contact' , function (){
+        
+        clearResults(); 
+        
+        var result = {};
+        result.name = 'Loading...';
+        
+        filterResult([result]);
+        
+        search.show();
+        userInfo.hide();
+    });
+    
+    // fetch search
+    $('body').keyup('#contact' , function (event){
+        var val = event.target.value;
+        
+        if(val.length != 0 && val.length >= 3){
+            
+            getAllContacts(val);
+        }else{
+            // do nothing, let search retain old results
+        }
+    });
+    
+    // Get contacts to display
     
     var getAllContacts = function(search) {
         var options      = new ContactFindOptions();
@@ -194,72 +116,102 @@ var contacts = (function (){
     };
     
     var onSuccess = function(contacts) {
+        
         clearResults(); 
+        
+        var lastResult = [];
+        
         if(contacts.length === 0){
-            filterResult('No Result');    
+            var result = {};
+            result.name = 'No Result';
+            
+            lastResult.push(result);
+            
         }else{
             
             for(var i=0; i<contacts.length; i++){
+
                 if(contacts[i].displayName && contacts[i].displayName != 'null')
-                    filterResult(contacts[i].displayName, contacts[i].id, contacts[i].photos , contacts[i].phoneNumbers);   
+                    var result = {};
+                    result.name = contacts[i].displayName;
+                    result.id = contacts[i].id;
+                    result.photo = contacts[i].photos;
+                
+                    var phoneNumbers = [];
+                
+                    var contactPhoneNumbers = contacts[i].phoneNumbers;
+                
+                    for(var j=0; j<contactPhoneNumbers.length; j++){
+                        
+                        var phoneNumber = contactPhoneNumbers[j];
+                        
+                        console.log('iteration' + phoneNumber);
+                        
+                        var phone = {};
+                        phone.number = phoneNumber.value.replace("(" , "").replace(")" , "").replace(" " , "").replace("-" , "");
+                        phone.type = phoneNumber.type;
+                        console.log(phone);
+                        phoneNumbers.push(phone);
+                    }
+                
+                    result.phoneNumber = phoneNumbers; 
+                
+                    lastResult.push(result);
             }
         }
+        filterResult(lastResult);
     };
     
     var onError = function(contacts) {
         clearResults(); 
-        filterResult('Error');
+        
+        var result = {};
+        result.name = 'No Result';
+        
+        filterResult([result]);
     };
     
-    var filterResult = function (data , id , photos , phoneNumbers) {
+    
+    // update search stream
+    var filterResult = function (results) {
         
-        var phones = [];
-        if(phoneNumbers) {
-            for(var i=0; i<phoneNumbers.length; i++){
-                var phone = {};
-                phone.number = phoneNumbers[i].value.replace("(" , "").replace(")" , "").replace(" " , "").replace("-" , "");
-                phone.type = phoneNumbers[i].type;
-                
-                phones.push(phone);
-            }
-        }
-        var clone = resultTemplate.clone();
-        clone.attr('id',id);
-        clone.data('phoneNumber' , JSON.stringify(phones));
-        clone.text(data);
-        
-        var src ;
-        
-        if(photos && photos[0]){
-            src = photos[0].value;
+        for(var i=0; i< results.length; i++) {
+            var result = results[i];
+
+            var clone = resultTemplate.clone();
             
-        }else{
-            src = "img/photo.jpg";
+            clone.text(result.name);
+            
+            if(result.id) {
+            
+                clone.attr('id' , result.id);
+            
+                if(result.photo && result.photo[0]){
+                    result.photo =  result.photo[0].value;
+                }else{
+                    result.photo =  "img/photo.jpg";
+                }
+   
+                clone.data('json' , JSON.stringify(result))
+                clone.append('<img src="' +result.photo + ' " height="100%" />'); 
+            }
+            
+            search.append(clone);
+            
         }
-        clone.append('<img src="' +src + ' " height="100%"   />');   
-        search.append(clone);
+        
     };
+    
+    // clear search stream
     
     var clearResults = function () {
-        search.html('');  
+        search.empty();  
     };
     
-    $('body').on('getAllContacts',function (){
-        initialize(); 
-    });
-    
-    var addContactSuccess = function (contact) {
-        $('body').trigger('showRemainders',[contact.id , contact.displayName]);
-    };
-    
-    var addContactError = function (error) {
-        
-        clearResults();
-        filterResult('Error creating');
-    };
-    
+    // register user
     $('body').on('toUser',function (){
-        var name = $('#contact').val();
+        
+        /*var name = $('#contact').val();
         var id = $('#contact').data('contactID');
         var photo = $('#contact').data('photo');
         var phoneNumber = $('#contact').data('phoneNumber');
@@ -270,18 +222,78 @@ var contacts = (function (){
         
         var contact = {
             'id' : id,
-            'displayName' : name,
+            'name' : name,
             'photo' : photo,
             'phoneNumber' : phoneNumber
-        };
+        };*/
+        
+        var contact = $('#contact').data('json');
         
         techoStorage.addContact(addContactSuccess,addContactError,[contact]);
         
     });
     
-});
+    var addContactSuccess = function (contact) {
+        
+        console.log('success'+contact);
+        
+        $('body').trigger('showRemainders',[JSON.stringify(contact)]);
+    };
+    
+    var addContactError = function (error) {
+        console.log('error : '+error);
+        clearResults();// handle message
+        filterResult('Error creating');
+    };
+
+    // update select$ion
+    $('body').on(configuartion.events.userselect, '.row' ,function (event){
+        var target = $(event.currentTarget);
+        
+        if(target.attr('id')){
+            
+            $('#contact').val(target.text());
+            
+            var json = target.data('json');
+            
+            $('#contact').data('json' , JSON.parse(json));
+            
+            search.hide();
+            
+            var userObj = JSON.parse(json);
+            
+            userInfo.find('.name').text(userObj.name);
+            userInfo.find('img').attr('src' , userObj.photo);
+        
+            var number = userInfo.find('.number');
+        
+            var numberClone = number.find('#numberClone');
+            number.empty();
+            
+            number.append(numberClone);
+            
+            for(var i=0; i<userObj.phoneNumber.length ; i++){
+                var phoneNumber = userObj.phoneNumber[i];
+                
+                var clone = numberClone.clone();
+                
+                clone.find('.msisdn').text(phoneNumber.number);
+                clone.find('.type').text(phoneNumber.type);
+                
+                clone.show();
+                
+                number.append(clone);
+            }
+            
+            userInfo.show();
+            
+            
+        }
+    });
+    
+})();
 
 $('body').on('ContactsReady',function (event){
-    contacts();
-    $( this ).off( event ); // similar jquery one event
+    //contacts();
+    //$( this ).off( event ); // similar jquery one event
 });

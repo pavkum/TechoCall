@@ -34,7 +34,9 @@ var techocall = (function (){
         
         if(historyList.length > 0){
             var historyObj = historyList.pop();
-            console.log("triggerHistory" + historyObj);
+            console.log("triggerHistory" + historyObj.eventArgs);
+            console.log("triggerHistory" + JSON.stringify(historyObj.eventArgs));
+            
             $('body').trigger(historyObj.eventName , historyObj.eventArgs);    
             
             if(historyList.length === 0) {
@@ -65,6 +67,7 @@ var techocall = (function (){
         event.preventDefault();
         event.stopImmediatePropagation();
         $('header').height(headerHeight);
+        
         return false;
     });
 });
