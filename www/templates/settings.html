@@ -1,0 +1,208 @@
+<style>
+    .wrapper {
+        padding: 2% 5%;   
+    }
+    
+    .item {
+        background: white;
+        margin-top: 2px;
+        color: #848484;
+        padding: 1% 5%;
+    }
+    
+    @media screen and (min-height : 240px) {
+        .name , .checkbox , .description {
+            height: 20px;
+            line-height: 20px;
+        }
+        
+    }
+
+    @media screen and (min-height : 320px) {
+
+        .name , .checkbox , .description {
+            height: 24px;
+            line-height: 24px;
+        }
+        
+    }
+
+    @media screen and (min-height : 480px) {
+        .name , .checkbox , .description {
+            height: 32px;
+            line-height: 32px;
+        }
+        
+    }
+
+    @media screen and (min-height : 600px) {
+        .name , .checkbox , .description {
+            height: 48px;
+            line-height: 48px;
+        }
+        
+    }
+
+    @media screen and (min-height : 720px) {
+        .name , .checkbox , .description {
+            height: 60px;
+            line-height: 60px;
+        }
+        
+    }
+
+    @media screen and (min-height : 800px) {
+        .name , .checkbox , .description {
+            height: 72px;
+            line-height: 72px;
+        }
+        
+    }
+
+    @media screen and (min-height : 900px) {
+        .name , .checkbox , .description {
+            height: 80px;
+            line-height: 80px;
+        }
+        
+    }
+
+    @media screen and (min-height : 960px) {
+        .name , .description {
+            height: 45px;
+            line-height: 45px;
+        }
+        
+        .checkbox {
+            height: 90px;
+            line-height: 90px;
+        }
+        
+    }
+
+    @media screen and (min-height : 1200px) {
+        .name , .checkbox , .description {
+            height: 96px;
+            line-height: 96px;
+        }
+        
+    }
+
+    @media screen and (min-height : 1280px) {
+        .name , .checkbox , .description {
+            height: 120px;
+            line-height: 120px;
+        }
+        
+    }
+
+    @media screen and (min-height : 1600px) {
+        .name , .checkbox , .description {
+            height: 128px;
+            line-height: 128px;
+        }
+        
+    }
+
+    @media screen and (min-height : 1920px) {
+        .name , .checkbox , .description {
+            height: 160px;
+            line-height: 160px;
+        }
+        
+    }
+
+
+    .itemInfo {
+        float: left;   
+    }
+    
+    .name {
+        font-size: 200%;
+        font-weight: bold;
+        box-sizing: border-box;
+    }
+    
+    .checkbox {
+        box-sizing: border-box;
+        float: right;   
+    }
+    
+    .description {
+        
+        box-sizing: border-box;
+        font-size: 125%;
+    }
+    
+    input[type="checkbox"] {
+        height: 20px;
+        border-radius: 100%;
+        border:1px solid red;
+    }
+    
+</style>
+
+<div class="wrapper">
+
+    <div class="item" id="openclosed">
+        <div class="itemInfo">
+            <div class="name">
+                Open Remainder closed?
+            </div>
+            
+            <div class="description">
+                Should remainder msg be open in closed state?
+            </div>
+        </div>
+        <div class="checkbox">
+            <input type="checkbox" />
+        </div>
+        <div class="clearfix"></div>
+    </div>
+
+    <div class="item" id="autodelete">
+        <div class="itemInfo">
+            <div class="name">
+                Auto delete viewed Remainders
+            </div>
+            
+            <div class="description">
+                Automatically delete remainders once viewed
+            </div>
+        </div>
+        <div class="checkbox">
+            <input type="checkbox" />
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    
+    <div class="item" id="anonymoususage">
+        <div class="itemInfo">
+            <div class="name">
+                Send anonymous usage statistics
+            </div>
+            
+            <div class="description">
+                Send usage statistics for imporvements of the product
+            </div>
+        </div>
+        <div class="checkbox">
+            <input type="checkbox" />
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    
+    <div class="item" id="about">
+        <div class="itemInfo">
+            <div class="name">
+                About Next Time
+            </div>
+            
+            <div class="description">
+                About the application
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+
+</div>
