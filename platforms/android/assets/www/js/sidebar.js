@@ -13,6 +13,10 @@
     touchHandler.curX = undefined;
     touchHandler.timer = undefined;
     
+    $('body').on(configuartion.events.userselect ,  '#sidebar' , function (){
+        hideSidebar();
+    });
+    
     $('body').on('touchmove' , function (event){
             var x = event.originalEvent.changedTouches[0].clientX;
             //var x = event.clientX;
@@ -53,13 +57,13 @@
     });
     
     
-    $('body').on('swiperight' , function (){
+    /*$('body').on('swiperight' , function (){
         showSidebar();
     });
     
     $('body').on('swipeleft' , function (){
         hideSidebar();
-    });
+    });*/
 
     var showSidebar = function () {
         elem.show('fast');
@@ -126,5 +130,7 @@
         stack.height(elemHeight - headerHeight);
         $(this).off(event);
     });
+    
+    
     
 })();

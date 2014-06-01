@@ -16,6 +16,14 @@ var techoStorage = {
         }
     },
     
+    deleteContact : function (sucesscallback, errorcallback, args) {
+        try {
+            exec(successcallback ,  errorcallback , 'techoStorage' , 'deleteContact' , args);
+        }catch(error){
+            errorcallback('Please try again later');   
+        }
+    },
+    
     addRemainder : function (successcallback, errorcallback, args){
         try{
             exec(successcallback ,  errorcallback , 'techoStorage' , 'addRemainder' , args);

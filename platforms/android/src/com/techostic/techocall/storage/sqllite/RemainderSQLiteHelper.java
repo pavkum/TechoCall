@@ -17,7 +17,7 @@ public class RemainderSQLiteHelper extends SQLiteOpenHelper implements Remainder
 
 	private static final int DATABASE_VERSION = 1;
 	
-	private static final String DATABASE_NAME = "TechoCall";
+	private static final String DATABASE_NAME = "NextTime";
 	
 	private static final String TABLE_NAME = "Remainder";
 	
@@ -132,6 +132,7 @@ public class RemainderSQLiteHelper extends SQLiteOpenHelper implements Remainder
 		
 		try{
 			db = this.getWritableDatabase();
+			db.beginTransaction();
 			
 			ContentValues values = new ContentValues();
 			
@@ -145,7 +146,7 @@ public class RemainderSQLiteHelper extends SQLiteOpenHelper implements Remainder
 			
 			db.insert(TABLE_NAME, null, values);
 			
-			db.close();
+			db.setTransactionSuccessful();
 			
 			return true;
 			
@@ -153,6 +154,7 @@ public class RemainderSQLiteHelper extends SQLiteOpenHelper implements Remainder
 			Log.d(DATABASE_NAME + " : " + DATABASE_VERSION, "Error occured while creating Remainder "+remainder + " : " + e.getMessage());
 		}finally{
 			if(db != null){
+				db.endTransaction();
 				if(db.isOpen()){
 					db.close();
 				}
@@ -167,31 +169,27 @@ public class RemainderSQLiteHelper extends SQLiteOpenHelper implements Remainder
 		
 		try{
 			db = this.getWritableDatabase();
+			db.beginTransaction();
 			
 			ContentValues values = new ContentValues();
 			
-			/*values.put(REMAINDER_ID, remainder.getRemainderID());
-			values.put(CONTACT_ID, remainder.getContactID());*/
 			values.put(REMAINDER_MESSAGE, remainder.getRemainderMessage());
-			//values.put(REMAINDER_TYPE, remainder.getRemainderType());
 			values.put(IS_REMAINDED, remainder.isRemainded());
 			values.put(REMAINDED_ON, remainder.getRemaindedOn());
 			values.put(REMAINDED_USING, remainder.getRemaindedUsing());
-			
-			//db.insert(TABLE_NAME, null, values);
 			
 			String updateArgs[] = {remainder.getRemainderID() + ""};
 			
 			db.update(TABLE_NAME, values, REMAINDER_ID + " = ? ", updateArgs);
 			
-			db.close();
-			
+			db.setTransactionSuccessful();
 			return true;
 			
 		}catch(Exception e){
 			Log.d(DATABASE_NAME + " : " + DATABASE_VERSION, "Error occured while updating Remainder "+remainder + " : " + e.getMessage());
 		}finally{
 			if(db != null){
+				db.endTransaction();
 				if(db.isOpen()){
 					db.close();
 				}
@@ -206,6 +204,7 @@ public class RemainderSQLiteHelper extends SQLiteOpenHelper implements Remainder
 		
 		try{
 			db = this.getWritableDatabase();
+			db.beginTransaction();
 			
 			for(int i=0; i<remainderIDs.size(); i++){
 				Long remainderID = remainderIDs.get(i);
@@ -215,15 +214,16 @@ public class RemainderSQLiteHelper extends SQLiteOpenHelper implements Remainder
 				db.delete(TABLE_NAME, REMAINDER_ID + " = ? ", deleteArgs);
 			}
 			
-			db.close();
-			
+			db.setTransactionSuccessful();
 			return true;
 			
 		}catch(Exception e){
 			Log.d(DATABASE_NAME + " : " + DATABASE_VERSION, "Error occured while deleting Remainder "+remainderIDs + " : " + e.getMessage());
+			
 		
 		}finally{
 			if(db != null){
+				db.endTransaction();
 				if(db.isOpen()){
 					db.close();
 				}
@@ -281,4 +281,34 @@ public class RemainderSQLiteHelper extends SQLiteOpenHelper implements Remainder
 		return null;
 	}
 
+	@Override
+	public boolean deleteRemainderByContactId(long contactID) {
+		SQLiteDatabase db = null;
+		
+		try{
+			db = this.getWritableDatabase();
+			db.beginTransaction();
+			
+			String deleteArgs[] = {contactID + ""};
+			
+			db.delete(TABLE_NAME, CONTACT_ID + " = ? ", deleteArgs);
+			
+			db.setTransactionSuccessful();
+			return true;
+			
+		}catch(Exception e){
+			Log.d(DATABASE_NAME + " : " + DATABASE_VERSION, "Error occured while deleting Remainder by contactId "+contactID + " : " + e.getMessage());
+			
+		
+		}finally{
+			if(db != null){
+				db.endTransaction();
+				if(db.isOpen()){
+					db.close();
+				}
+			}
+		}
+		
+		return false;
+	}
 }

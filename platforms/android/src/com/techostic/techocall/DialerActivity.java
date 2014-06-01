@@ -1,5 +1,8 @@
 package com.techostic.techocall;
 
+import java.util.List;
+
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +13,9 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
+import com.techostic.techocall.modal.Settings;
+import com.techostic.techocall.storage.StorageAPI;
+import com.techostic.techocall.storage.StorageAPIImpl;
 import com.techostic.techocall.webinterface.DialerInterface;
 
 public class DialerActivity extends Activity {
@@ -17,38 +23,19 @@ public class DialerActivity extends Activity {
 	
 	private static DialerActivity dialerActivity = null;
 	
+	private StorageAPI storageAPIImpl = null;
+	
 	public static DialerActivity getInstance() {
 		return dialerActivity;
 	}
 	
-	/*public void onCreate1(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
-		super.onCreate(savedInstanceState);
-		super.setBooleanProperty("SetFullscreen", false);
-		super.init();
-		this.setBooleanProperty("SetFullscreen", false);
-		this.getWindow().addFlags(LayoutParams.FLAG_NOT_TOUCH_MODAL);   
-		this.getWindow().setFlags(LayoutParams.FLAG_WATCH_OUTSIDE_TOUCH, LayoutParams.FLAG_WATCH_OUTSIDE_TOUCH);  
-		this.getWindow().setGravity(Gravity.TOP);
-		
-		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN);
-		
-		Long contactID = this.getIntent().getLongExtra("contactID", -1l);
-		
-		if(contactID != -1){
-			
-			super.loadUrl("file:///android_asset/www/dialer.html");
-		}else{
-			this.endActivity();
-		}
-		
-	}*/
-	
+	@SuppressLint("SetJavaScriptEnabled")
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		
 		DialerActivity.dialerActivity = this;
+		
+		storageAPIImpl = StorageAPIImpl.getInstance(this);
 		
 		super.onCreate(savedInstanceState);
 			
@@ -70,9 +57,21 @@ public class DialerActivity extends Activity {
 		WebSettings webSettings = wv.getSettings();
 		webSettings.setJavaScriptEnabled(true);
 		
+		Settings autoRemove = storageAPIImpl.getSettingsBySettingsName("autoRemove");
+		
+		
+		String autoRemoveStatus = "0"; // dont delete by default
+		
+		
+		if(autoRemove != null){ //no error while obtaining ;
+			autoRemoveStatus = autoRemove.getValue();
+		}
+		
+		
+		
 		final String jsonData = this.getIntent().getStringExtra("json");
 		
-		wv.addJavascriptInterface(new DialerInterface(this), "Android");
+		wv.addJavascriptInterface(new DialerInterface(this , storageAPIImpl , autoRemoveStatus , this.getIntent().getIntExtra("remaindedUsing", -1)), "Android");
 		
 		wv.setWebViewClient(new WebViewClient() {
 		    @Override
@@ -85,7 +84,15 @@ public class DialerActivity extends Activity {
 		    public void onPageFinished(WebView view, String url) {
 		    	super.onPageFinished(view, url);
 		    	
-		    	wv.loadUrl("javascript:updateData('" + jsonData + "');");
+		    	Settings openClosed = storageAPIImpl.getSettingsBySettingsName("showCollapsed");
+		    	
+		    	String openClosedStatus = "0"; // expand by default
+		    	
+		    	if(openClosed != null){
+					openClosedStatus = openClosed.getValue();
+				}
+		    	
+		    	wv.loadUrl("javascript:updateData('" + jsonData + "' , " + openClosedStatus + ");");
 		    }
 		});
 		
@@ -100,9 +107,7 @@ public class DialerActivity extends Activity {
 	@Override
 	protected void onNewIntent(Intent intent) {
 		super.onNewIntent(intent);
-		System.out.println("extra intent added");
 		if(intent.getStringExtra("finish") != null){
-			System.out.println("finish called");
 			finish();
 		}
 		
@@ -110,7 +115,6 @@ public class DialerActivity extends Activity {
 	
 	@Override
 	protected void onDestroy() {
-		System.out.println("being destroyed");
 		DialerActivity.dialerActivity = null;
 		super.onDestroy();
 	}

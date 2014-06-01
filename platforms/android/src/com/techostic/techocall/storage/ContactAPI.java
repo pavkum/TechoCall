@@ -13,4 +13,6 @@ public interface ContactAPI {
 	public Long getContactIDByPhoneNumber(String phoneNumber);
 	
 	public Contact getContactById(long contactID);
+	
+	public boolean deleteContactById(List<Long> contactIDs);
 }

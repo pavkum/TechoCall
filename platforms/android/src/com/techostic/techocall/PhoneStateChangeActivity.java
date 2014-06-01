@@ -62,7 +62,7 @@ public class PhoneStateChangeActivity extends BroadcastReceiver{
 	}
 	
 	private void hideDialer(Context context) {
-		System.out.println("dialer intent : " + dialerIntent);
+		
 		if(this.dialerIntent != null){
 			this.dialerIntent.putExtra("finish", "finish");
 			
@@ -82,7 +82,7 @@ public class PhoneStateChangeActivity extends BroadcastReceiver{
 				remainder.setRemaindedOn(new Date().getTime());
 				remainder.setRemaindedUsing(this.remaindedUsing);
 				
-				storageAPIImpl.updateRemainder(remainder);
+				//storageAPIImpl.updateRemainder(remainder);
 				
 			}
 			
@@ -121,10 +121,15 @@ public class PhoneStateChangeActivity extends BroadcastReceiver{
 				JSONArray jsonMessageArray = new JSONArray();
 				
 				for(int i=0; i<remainderList.size(); i++){
-					jsonMessageArray.put(remainderList.get(i).getRemainderMessage());
+					JSONObject jsonData = new JSONObject();
+					
+					jsonData.put("id", remainderList.get(i).getRemainderID());
+					jsonData.put("message", remainderList.get(i).getRemainderMessage());
+					
+					jsonMessageArray.put(jsonData);
 				}
 				
-				jsonObject.put("message", jsonMessageArray);
+				jsonObject.put("remainders", jsonMessageArray);
 				
 			} catch (JSONException e) {
 				Log.d("Dialer Activity", "An error occured while displaying remainder for contact ID : "+contactID + " : " + e.getMessage());
@@ -136,6 +141,7 @@ public class PhoneStateChangeActivity extends BroadcastReceiver{
 			dialerIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 			dialerIntent.putExtra("contactID", contactID);
 			dialerIntent.putExtra("json", jsonObject.toString());
+			dialerIntent.putExtra("remaindedUsing", this.remaindedUsing);
 			
 	        context.startActivity(dialerIntent);
 		}

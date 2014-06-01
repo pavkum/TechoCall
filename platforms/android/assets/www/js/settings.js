@@ -14,27 +14,36 @@ var settings = (function (){
     };
     
     var getSettingsSuccess = function (data) {
-        if(data && data.config){
-            for(var i=0; i<data.config.length; i++){
-                var config = data.config[i];
+        
+        if(data){
+            for(var i=0; i<data.length; i++){
+                var config = data[i];
                 
                 var name = config.name;
                 var value = config.value;
+                var id = config.id;
                 
-                elem.find('#' + name).find('input').val(value);
+                console.log(id + ":" + name + ":" + value);
+                
+                if(value == 0){
+                    elem.find('#' + id).find('input').removeAttr('checked');    
+                }else{
+                    elem.find('#' + id).find('input').attr('checked' , 'checked');    
+                }
+                
             }
         }
     };
     
     var getSettingsError = function (error) {
-        // do nothing
+        notification('Error while loading settings');
     };
     
     $('body').on('settings' , function (){
         
         var def = new $.Deferred();
         
-        $('body').trigger('addToHistory',['settings']);
+        $('body').trigger('addToHistory',['showTechoContacts']);
         
         $('body').trigger('headerMiddle',['Settings']);
         $('body').trigger('headerRight',['<img src="img/settings.png" />']);// local event
@@ -43,33 +52,37 @@ var settings = (function (){
         loadTemplate(def);
         
         def.done(function (){
-            //techoStorage.getSettings(getSettingsSuccess , getSettingsError , []);
+            techoStorage.getSettings(getSettingsSuccess , getSettingsError , []);
         });
         
     });
     
     var updateSuccess = function (data) {
-        // do nothing
+        notification('Updated...');
     };
     
     var updateError = function (error) {
-        alert(error);
-        // do nothing
+        notification('Error updating preferences');
     };
     
     var handleConfiguration = function (id , target) {
-        var val = target.find('input').val();
+        // when clicked always getting opposite value, should investigate
+        var val = target.find('input').attr('checked') ? 0 : 1;
         
         var setting = {
-            option : id,
+            id : id,
             value : val
         };
         
-        //techoStorage.updateSettings(updateSuccess , updateError , [setting]);
+        techoStorage.updateSettings(updateSuccess , updateError , [setting]);
     };
     
     var handleAbout = function () {
+        var data = "<div>Version 1.0.0</div>" + 
+                    "<div>techocall@gmail.com</div>";
+        var title = "About Next Time";
         
+        alert(data , title);
     };
     
     $('body').on(configuartion.events.userselect , '.item' , function (event){

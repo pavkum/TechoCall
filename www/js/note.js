@@ -88,8 +88,12 @@ var note = (function (){
                 
                 $('#edit').hide();
                 
+                $('#note').attr('readonly' , false);
+                
                 $('#saveOrUpdate').show();
                 $('#cancel').show();
+                
+                $('#note').focus();
                 
             }
         });
@@ -185,12 +189,15 @@ var note = (function (){
         
         $('#note').attr('readonly' , false);
         
+        $('#note').focus();
         
     });
     
     $('body').on(configuartion.events.userselect, '#delete' , function (){
+        
         var remainderIds = {};
-        remainderIds.remainderId = remainder.remainderId;
+        remainderIds.remainderIds = [remainder.remainderId];
+        
         techoStorage.deleteRemainder(deleteSuccess , deleteError , [remainderIds]);
     });
     

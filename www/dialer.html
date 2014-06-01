@@ -15,33 +15,45 @@
     <body style="opacity:0.5">
        
         <header>
-            <div class="icon">
+            <!--<div class="icon">
                 I
-            </div>
+            </div>-->
+            
+            
+            
             <div class="name">
                 Loading...
             </div>
-            <div class="close"  id="close">
+            <!--<div class="close"  id="close">
                 X
-            </div>
+            </div>-->
             <div class="clearfix"></div>
         </header>
         
         <div class="container">
-            <table>
-                <tr>
-                    <td class="left">
-                        &#8592;        
-                    </td>
-                    <td class="message">
-                        Loading...
-                    </td>
-                    <td class="right">
-                        &#8594;    
-                    </td>
-                </tr>
-            </table>
+                <div class="left">
+                    &#8592;
+                </div>
+                <div class="message">
+                    <span id="messageLoading" style="display:none">Loading</span>
+                        <div class="item" id="template" style="display:none">
+                            
+                            <input class="checkbox" type="checkbox" id="id" />
+                            <!--<div class="checkbox"></div>-->
+                            <label for="id">Talk about completion</label>
+                            
+                        </div>
+                </div>
+                <div class="right">
+                    &#8594;
+                </div>
         </div>
+
+        <footer>
+            <div class="button" id="selected">Selected Done</div>
+            <div class="button" style="border-left:1px solid white; border-right:1px solid white" id="all">Mark All Done</div>
+            <div class="button" id="close">Close</div>
+        </footer>
         
         <script src="js/dialer/dialer.js"></script>
         

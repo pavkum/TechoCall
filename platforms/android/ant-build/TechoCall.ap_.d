@@ -48,6 +48,7 @@
 /home/pavan/android_project/TechoCall/platforms/android/assets/www/plugins/org.apache.cordova.contacts/src/windows8 \
 /home/pavan/android_project/TechoCall/platforms/android/assets/www/plugins/org.apache.cordova.contacts/src/windows8/ContactProxy.js \
 /home/pavan/android_project/TechoCall/platforms/android/assets/www/templates/registeredUser.html \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/templates/alert.html \
 /home/pavan/android_project/TechoCall/platforms/android/assets/www/templates/userInfo.html \
 /home/pavan/android_project/TechoCall/platforms/android/assets/www/templates/allContacts.html \
 /home/pavan/android_project/TechoCall/platforms/android/assets/www/templates/settings.html \
@@ -71,7 +72,9 @@
 /home/pavan/android_project/TechoCall/platforms/android/assets/www/js/registeredContacts.js \
 /home/pavan/android_project/TechoCall/platforms/android/assets/www/js/techocall.js \
 /home/pavan/android_project/TechoCall/platforms/android/assets/www/js/index.js \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/js/fastclick.min.js \
 /home/pavan/android_project/TechoCall/platforms/android/assets/www/js/userInfo.js \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/js/base.js \
 /home/pavan/android_project/TechoCall/platforms/android/assets/www/js/logger.js \
 /home/pavan/android_project/TechoCall/platforms/android/assets/www/js/utilities.js \
 /home/pavan/android_project/TechoCall/platforms/android/assets/www/js/showContacts.js \

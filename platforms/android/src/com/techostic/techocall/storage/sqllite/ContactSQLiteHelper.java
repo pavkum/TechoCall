@@ -11,13 +11,14 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
 import com.techostic.techocall.modal.Contact;
+import com.techostic.techocall.modal.Settings;
 import com.techostic.techocall.storage.ContactAPI;
 
 public class ContactSQLiteHelper extends SQLiteOpenHelper implements ContactAPI {
 
 	private static final int DATABASE_VERSION = 1;
 	
-	private static final String DATABASE_NAME = "TechoCall";
+	private static final String DATABASE_NAME = "NextTime";
 	
 	private static final String CONTACT_ID = "ContactID";
 	
@@ -43,6 +44,14 @@ public class ContactSQLiteHelper extends SQLiteOpenHelper implements ContactAPI 
 	
 	private static final String TABLE_NAME_REMAINDER = "Remainder";
 	
+	private static final String TABLE_NAME_SETTINGS = "Settings";
+	
+	private static final String SETTINGS_ID = "SETTINGS_ID";
+	
+	private static final String SETTINGS_NAME = "SETTINGS_NAME";
+	
+	private static final String SETTINGS_VALUE = "SETTINGS_VALUE";
+	
 	public ContactSQLiteHelper(Context context) {
 		super(context, DATABASE_NAME, null, DATABASE_VERSION);
 		
@@ -50,32 +59,52 @@ public class ContactSQLiteHelper extends SQLiteOpenHelper implements ContactAPI 
 
 	@Override
 	public void onCreate(SQLiteDatabase db) {
-		String CREATE_CONTACT_TABLE = "CREATE TABLE " + TABLE_NAME_CONTACT + " ( " +
-                CONTACT_ID + " INTEGER PRIMARY KEY , " + 
-                FULL_NAME + " TEXT," +
-                PHOTO + " TEXT," +
-                PHONE_NUMBER + " TEXT" +
-                ")";
-		
-		
-		String CREATE_REMAINDER_TABLE = "CREATE TABLE " + TABLE_NAME_REMAINDER + " ( " +
-                REMAINDER_ID  + " INTEGER PRIMARY KEY , " + 
-                CONTACT_ID + " INTEGER," +
-                REMAINDER_MESSAGE + " TEXT," +
-                REMAINDER_TYPE + " INTEGER," +
-                IS_REMAINDED + " INTEGER," +
-                REMAINDED_ON + " INTEGER," +
-                REMAINDED_USING + " INTEGER" +
-                ")";
-		
+		String CREATE_CONTACT_TABLE = "CREATE TABLE " + TABLE_NAME_CONTACT
+				+ " ( " + CONTACT_ID + " INTEGER PRIMARY KEY , " + FULL_NAME
+				+ " TEXT," + PHOTO + " TEXT," + PHONE_NUMBER + " TEXT" + ");";
+
+		String CREATE_REMAINDER_TABLE = "CREATE TABLE " + TABLE_NAME_REMAINDER
+				+ " ( " + REMAINDER_ID + " INTEGER PRIMARY KEY , " + CONTACT_ID
+				+ " INTEGER," + REMAINDER_MESSAGE + " TEXT," + REMAINDER_TYPE
+				+ " INTEGER," + IS_REMAINDED + " INTEGER," + REMAINDED_ON
+				+ " INTEGER," + REMAINDED_USING + " INTEGER," + " FOREIGN KEY ("
+				+ CONTACT_ID + ") REFERENCES " + TABLE_NAME_CONTACT + "("
+				+ CONTACT_ID + ") ON DELETE CASCADE" + ");";
+
+		String CREATE_SETTINGS_TABLE = "CREATE TABLE " + TABLE_NAME_SETTINGS
+				+ " ( " + SETTINGS_ID + " INTEGER PRIMARY KEY , "
+				+ SETTINGS_NAME + " TEXT," + SETTINGS_VALUE + " TEXT" + ");";
+
 		Log.d(DATABASE_NAME, CREATE_CONTACT_TABLE);
-		
+
 		db.execSQL(CREATE_CONTACT_TABLE);
-		
+
 		Log.d(DATABASE_NAME, CREATE_REMAINDER_TABLE);
-		
+
 		db.execSQL(CREATE_REMAINDER_TABLE);
 
+		Log.d(DATABASE_NAME, CREATE_SETTINGS_TABLE);
+
+		db.execSQL(CREATE_SETTINGS_TABLE);
+		
+		Settings autoRemove = new Settings();
+		autoRemove.setSettingsID(1l);
+		autoRemove.setName("autoRemove");
+		autoRemove.setValue("0");
+		createSettings(autoRemove , db);
+		
+		Settings showCollapsed = new Settings();
+		showCollapsed.setSettingsID(2l);
+		showCollapsed.setName("showCollapsed");
+		showCollapsed.setValue("0");
+		createSettings(showCollapsed , db);
+		
+		Settings anonymousUsage = new Settings();
+		anonymousUsage.setSettingsID(3l);
+		anonymousUsage.setName("anonymousUsage");
+		anonymousUsage.setValue("1");
+		createSettings(anonymousUsage , db);
+		
 	}
 
 	@Override
@@ -85,6 +114,41 @@ public class ContactSQLiteHelper extends SQLiteOpenHelper implements ContactAPI 
 		this.onCreate(db);
 
 	}
+	
+	private boolean createSettings(Settings settings , SQLiteDatabase db){
+		
+		try{
+			
+			//db = this.getWritableDatabase();
+			
+			//db.beginTransaction();
+			
+			ContentValues values = new ContentValues();
+			
+			values.put(SETTINGS_ID, settings.getSettingsID());
+			values.put(SETTINGS_NAME, settings.getName());
+			values.put(SETTINGS_VALUE, settings.getValue());
+			
+			db.insert(TABLE_NAME_SETTINGS, null, values);
+			
+			//db.setTransactionSuccessful();
+			return true;
+			
+		}catch(Exception e){
+			Log.d(DATABASE_NAME + " : " + DATABASE_VERSION, "Error occured while creating settings "+settings + " : " + e.getMessage());
+		}finally{
+			if(db != null){
+				//db.endTransaction();
+				if(db.isOpen()){
+					//db.close();
+				}
+			}
+		}
+		
+		return false;
+		
+	}
+
 
 	@Override
 	public boolean addContact(Contact contact) {
@@ -98,6 +162,8 @@ public class ContactSQLiteHelper extends SQLiteOpenHelper implements ContactAPI 
 			
 			db = this.getWritableDatabase();
 			
+			db.beginTransaction();
+			
 			ContentValues values = new ContentValues();
 			
 			values.put(CONTACT_ID, contact.getContactID());
@@ -107,14 +173,14 @@ public class ContactSQLiteHelper extends SQLiteOpenHelper implements ContactAPI 
 			
 			db.insert(TABLE_NAME_CONTACT, null, values);
 			
-			db.close();
-			
+			db.setTransactionSuccessful();
 			return true;
 			
 		}catch(Exception e){
 			Log.d(DATABASE_NAME + " : " + DATABASE_VERSION, "Error occured while creating contact "+contact + " : " + e.getMessage());
 		}finally{
 			if(db != null){
+				db.endTransaction();
 				if(db.isOpen()){
 					db.close();
 				}
@@ -246,6 +312,38 @@ public class ContactSQLiteHelper extends SQLiteOpenHelper implements ContactAPI 
 		}
 		
 		return null;
+	}
+	
+	@Override
+	public boolean deleteContactById(List<Long> contactIDs) {
+		SQLiteDatabase db = null;
+		// Foreign key mapping should delete all remainder ids automatically
+		try{
+			db = this.getWritableDatabase();
+			db.beginTransaction();
+			
+			for(int i=0; i<contactIDs.size(); i++){
+				String deleteArgs[] = {contactIDs.get(i) + ""};
+				
+				db.delete(TABLE_NAME_CONTACT, CONTACT_ID + " = ? ", deleteArgs);
+			}
+			
+			
+			db.setTransactionSuccessful();
+			return true;
+			
+		}catch(Exception e){
+			Log.d(DATABASE_NAME + " : " + DATABASE_VERSION, "Error occured while deleting Contact by contactId "+contactIDs + " : " + e.getMessage());
+		}finally{
+			if(db != null){
+				db.endTransaction();
+				if(db.isOpen()){
+					db.close();
+				}
+			}
+		}
+		
+		return false;
 	}
 
 }

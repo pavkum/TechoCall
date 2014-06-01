@@ -16,6 +16,14 @@ var techoStorage = {
         }
     },
     
+    deleteContact : function (sucesscallback, errorcallback, args) {
+        try {
+            exec(sucesscallback ,  errorcallback , 'techoStorage' , 'deleteContact' , args);
+        }catch(error){
+            errorcallback('Please try again later');   
+        }
+    },
+    
     addRemainder : function (successcallback, errorcallback, args){
         try{
             exec(successcallback ,  errorcallback , 'techoStorage' , 'addRemainder' , args);
@@ -64,7 +72,7 @@ var techoStorage = {
     
     getSettings : function (successcallback, errorcallback, args) {
         try{
-            exec(successcallback , errorcallback , 'techoStorage' , 'getSettings' , args)
+            exec(successcallback , errorcallback , 'techoStorage' , 'getAllSettings' , args)
         }catch(error) {
             errorcallback('Failed to obtain preferences');   
         }

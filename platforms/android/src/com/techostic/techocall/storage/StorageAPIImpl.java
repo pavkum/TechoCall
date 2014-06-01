@@ -6,6 +6,8 @@ import android.content.Context;
 
 import com.techostic.techocall.modal.Contact;
 import com.techostic.techocall.modal.Remainder;
+import com.techostic.techocall.modal.Settings;
+import com.techostic.techocall.settings.sqlite.SettingsSQLiteHelper;
 import com.techostic.techocall.storage.sqllite.ContactSQLiteHelper;
 import com.techostic.techocall.storage.sqllite.RemainderSQLiteHelper;
 
@@ -17,8 +19,11 @@ public class StorageAPIImpl implements StorageAPI {
 	
 	private static RemainderSQLiteHelper remainderSQLiteHelper = null;
 	
+	private static SettingsSQLiteHelper settingsSQLiteHelper = null;
+	
 	private StorageAPIImpl(Context context){
 		
+		settingsSQLiteHelper = new SettingsSQLiteHelper(context);
 		contactSQLiteHelper = new ContactSQLiteHelper(context);
 		remainderSQLiteHelper = new RemainderSQLiteHelper(context);
 	}
@@ -82,6 +87,33 @@ public class StorageAPIImpl implements StorageAPI {
 		return remainderSQLiteHelper.getAllPendingRemaindersByContactID(contactID);
 	}
 
+	@Override
+	public boolean deleteAllRecordsOfContactById(List<Long> contactIDs) {
+		return contactSQLiteHelper.deleteContactById(contactIDs);
+		/*boolean remainderRemovalStatus = remainderSQLiteHelper.deleteRemainderByContactId(contactID);
+		
+		boolean contactRemovalStatus = false;
+		
+		if(remainderRemovalStatus){
+			contactRemovalStatus = contactSQLiteHelper.deleteContactById(contactID);
+		}
+		
+		return contactRemovalStatus;*/
+	}
+
+	@Override
+	public List<Settings> getAllSettings() {
+		return settingsSQLiteHelper.getAllSettings();
+	}
+
+	@Override
+	public boolean updateSettings(Settings settings) {
+		return settingsSQLiteHelper.updateSettings(settings);
+	}
 	
+	@Override
+	public Settings getSettingsBySettingsName(String name) {
+		return settingsSQLiteHelper.getSettingsBySettingsName(name);
+	}
 
 }

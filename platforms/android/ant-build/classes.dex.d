@@ -30,6 +30,7 @@
 /home/pavan/android_project/TechoCall/platforms/android/ant-build/classes/com/techostic/techocall/modal/Contact.class \
 /home/pavan/android_project/TechoCall/platforms/android/ant-build/classes/com/techostic/techocall/modal/Remainder.class \
 /home/pavan/android_project/TechoCall/platforms/android/ant-build/classes/com/techostic/techocall/modal/PhoneNumber.class \
+/home/pavan/android_project/TechoCall/platforms/android/ant-build/classes/com/techostic/techocall/modal/Settings.class \
 /home/pavan/android_project/TechoCall/platforms/android/ant-build/classes/com/techostic/techocall/storage/StorageAPI.class \
 /home/pavan/android_project/TechoCall/platforms/android/ant-build/classes/com/techostic/techocall/storage/StorageAPIImpl.class \
 /home/pavan/android_project/TechoCall/platforms/android/ant-build/classes/com/techostic/techocall/storage/sqllite/RemainderSQLiteHelper.class \
@@ -39,11 +40,14 @@
 /home/pavan/android_project/TechoCall/platforms/android/ant-build/classes/com/techostic/techocall/storage/RemainderAPI.class \
 /home/pavan/android_project/TechoCall/platforms/android/ant-build/classes/com/techostic/techocall/plugin/StoragePluginOld$2.class \
 /home/pavan/android_project/TechoCall/platforms/android/ant-build/classes/com/techostic/techocall/plugin/StoragePlugin$5.class \
+/home/pavan/android_project/TechoCall/platforms/android/ant-build/classes/com/techostic/techocall/plugin/StoragePlugin$8.class \
 /home/pavan/android_project/TechoCall/platforms/android/ant-build/classes/com/techostic/techocall/plugin/StoragePluginOld$1.class \
 /home/pavan/android_project/TechoCall/platforms/android/ant-build/classes/com/techostic/techocall/plugin/DialerPlugin.class \
 /home/pavan/android_project/TechoCall/platforms/android/ant-build/classes/com/techostic/techocall/plugin/StoragePlugin$2.class \
 /home/pavan/android_project/TechoCall/platforms/android/ant-build/classes/com/techostic/techocall/plugin/StoragePluginOld.class \
 /home/pavan/android_project/TechoCall/platforms/android/ant-build/classes/com/techostic/techocall/plugin/StoragePlugin$6.class \
+/home/pavan/android_project/TechoCall/platforms/android/ant-build/classes/com/techostic/techocall/plugin/StoragePlugin$7.class \
+/home/pavan/android_project/TechoCall/platforms/android/ant-build/classes/com/techostic/techocall/plugin/StoragePlugin$9.class \
 /home/pavan/android_project/TechoCall/platforms/android/ant-build/classes/com/techostic/techocall/plugin/StoragePlugin$1.class \
 /home/pavan/android_project/TechoCall/platforms/android/ant-build/classes/com/techostic/techocall/plugin/StoragePlugin.class \
 /home/pavan/android_project/TechoCall/platforms/android/ant-build/classes/com/techostic/techocall/plugin/StoragePlugin$3.class \
@@ -60,6 +64,8 @@
 /home/pavan/android_project/TechoCall/platforms/android/ant-build/classes/com/techostic/techocall/R$string.class \
 /home/pavan/android_project/TechoCall/platforms/android/ant-build/classes/com/techostic/techocall/R$xml.class \
 /home/pavan/android_project/TechoCall/platforms/android/ant-build/classes/com/techostic/techocall/BuildConfig.class \
+/home/pavan/android_project/TechoCall/platforms/android/ant-build/classes/com/techostic/techocall/settings/SettingsAPI.class \
+/home/pavan/android_project/TechoCall/platforms/android/ant-build/classes/com/techostic/techocall/settings/sqlite/SettingsSQLiteHelper.class \
 /home/pavan/android_project/TechoCall/platforms/android/ant-build/classes/com/techostic/techocall/service/PhoneCallMonitorService$1.class \
 /home/pavan/android_project/TechoCall/platforms/android/ant-build/classes/com/techostic/techocall/service/PhoneCallMonitorService$2.class \
 /home/pavan/android_project/TechoCall/platforms/android/ant-build/classes/com/techostic/techocall/service/PhoneCallMonitorService.class \

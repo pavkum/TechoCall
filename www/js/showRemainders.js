@@ -53,6 +53,27 @@ var showAndRemainders = (function (){
         }
     };
     
+    var loadRemaindersError = function (error){
+        
+        $('#error').show();  
+    };
+    
+    var loadRemainders = function (contactID) {
+        
+        techoStorage.getAllRemaindersById(loadRemaindersSuccess, loadRemaindersError, [contactID]);
+    };
+    
+    var deleteSuccess = function (remainderIds) {
+        for(var i=0; i<remainderIds.length; i++){
+            $('#' + remainderIds[i]).remove();
+        }
+        notification('Delete successfull'); 
+    };
+    
+    var deleteError = function () {
+        notification('An error occured while deleting remainders'); 
+    };
+    
     var updateSidebar = function () {
         
         var template = $('<div><img height="70%"  style="position:relative;top:15%"/></div>');
@@ -70,6 +91,21 @@ var showAndRemainders = (function (){
         var deleteSelectedRemainder = template.clone().find('img').attr('src' , 'img/trash.png');
         deleteSelectedRemainder.on(configuartion.events.userselect , function (){
             
+            var selectedElements = $('.remainderItem[selected=selected]');
+            
+            if(selectedElements.length === 0){
+                notification('No elements selected to delete'); 
+                return;
+            }
+            
+            var remainderIds = {};
+            remainderIds.remainderIds = [];
+            
+            for(var i=0; i<selectedElements.length; i++){
+                remainderIds.remainderIds.push(selectedElements.eq(i).attr('id'));
+            }
+            
+            techoStorage.deleteRemainder(deleteSuccess , deleteError , [remainderIds]);
         });
         
         var upperStack = [addNewRemainder , showUserInfo , deleteSelectedRemainder];
@@ -79,15 +115,6 @@ var showAndRemainders = (function (){
         
     };
     
-    var loadRemaindersError = function (error){
-        
-        $('#error').show();  
-    };
-    
-    var loadRemainders = function (contactID) {
-        
-        techoStorage.getAllRemaindersById(loadRemaindersSuccess, loadRemaindersError, [contactID]);
-    };
     
     $('body').on('showRemainders',function (event , registeredUser){
         
@@ -105,8 +132,7 @@ var showAndRemainders = (function (){
         def.done(function (){
             
             loadRemainders(user.id);
-            //registerEvents(contactID , displayName , photo , phoneNumber);
-            //$('body').trigger('showNote'); // testing
+            
         });
         
     });
@@ -151,18 +177,30 @@ var showAndRemainders = (function (){
     });
     
     $('body').on('taphold' , '.remainderItem' , function (event){
+        
         var target = event.currentTarget;
         target = $(target);
             
-        var selected = target.data('selected');
-            
-        if(selected && selected == '1'){
-            target.data('selected' , 0);
-            target.css('background' , 'white');    
+        var selected = target.attr('selected');
+        
+        if(selected){
+            target.removeAttr('selected');
+            target.removeClass('selected');  
         }else{
-            target.data('selected' , 1);
-            target.css('background' , '#C5EFF7'); 
+            target.attr('selected' , 'selected');
+            target.addClass('selected');
         }
+        
+        var selectedElements = $('.remainderItem[selected=selected]');
+        
+        console.log(target[0].outerHTML);
+        
+        if(selectedElements.length === 0){
+            $('body').trigger('hideSidebar'); 
+        }else{
+            $('body').trigger('showSidebar');  
+        }
+        
     });
     
     
@@ -203,27 +241,27 @@ var showAndRemainders = (function (){
         $('.remainderItem').on('taphold' ,  function (event){
             var target = event.currentTarget;
             
-            target = $(target);
             
-            console.log(target);
-            
-            var selected = target.data('selected');
+            var selected = target.attr('selected');
             
             if(selected && selected == '1'){
-                target.data('selected' , 0);
-                
-                target.css('background' , 'white');    
+                target.attr('selected' , 0);
+
             }else{
                 
-                target.data('selected' , 1);
+                target.attr('selected' , 1);
                 
                 target.css('background' , '#C5EFF7'); 
             }
             
+            event.preventDefault();
+            event.stopPropagation();
             
+            return false;
         });
         
     };
+    
     
     
 })();
