@@ -1,20 +1,56 @@
+
 var updateData = function (data , openClosed) {
 
+
+    var template = $('<div class="item" style="display:none">' + 
+                   '<input class="checkbox" type="checkbox" id="id" />' +
+                   '<label for="id">Talk about completion</label>' +
+                   '</div>') ; 
+    
+    
     $('#close').on('touchstart' , function (){
         Android.finish();
     });
 
     
+    $('#all').on('touchstart' , function (){
+        var selectedElements = $('.item');
+        
+        var remainders = [];
+        
+        for(var i=0; i<selectedElements.length; i++){
+            
+            var remainder = {};
+            
+            var selectedElement = selectedElements.eq(i);
+            
+            remainder.id = selectedElement.attr('id');
+            remainder.message = selectedElement.find('label').text();
+            
+            remainders.push(remainder);   
+        }
+        console.log(remainders);
+        Android.markSelectedRead(JSON.stringify(remainders));
+    });
+    
     $('#selected').on('touchstart' , function (){
         var selectedElements = $('.item[selected=selected]');
         
-        var ids = [];
+        var remainders = [];
         
         for(var i=0; i<selectedElements.length; i++){
-            ids.push(selectedElements.eq(i).attr('id'));   
+            
+            var remainder = {};
+            
+            var selectedElement = selectedElements.eq(i);
+            
+            remainder.id = selectedElement.attr('id');
+            remainder.message = selectedElement.find('label').text();
+            
+            remainders.push(remainder);   
         }
-        console.log(ids);
-        Android.markSelectedRead(JSON.stringify(ids));
+        console.log(remainders);
+        Android.markSelectedRead(JSON.stringify(remainders));
     });
     
     data = JSON.parse(data);
@@ -22,8 +58,6 @@ var updateData = function (data , openClosed) {
     var index = 0;
     $('.name').text(data.name);
 
-    var template = $('#template');
-    
     var message = $('.message');
     
     for(var i=0; i<data.remainders.length; i++){

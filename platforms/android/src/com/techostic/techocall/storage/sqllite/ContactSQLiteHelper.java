@@ -115,6 +115,15 @@ public class ContactSQLiteHelper extends SQLiteOpenHelper implements ContactAPI 
 
 	}
 	
+	@Override
+	public void onOpen(SQLiteDatabase db) {
+	    super.onOpen(db);
+	    if (!db.isReadOnly()) {
+	        // Enable foreign key constraints
+	        db.execSQL("PRAGMA foreign_keys=ON;");
+	    }
+	}
+	
 	private boolean createSettings(Settings settings , SQLiteDatabase db){
 		
 		try{

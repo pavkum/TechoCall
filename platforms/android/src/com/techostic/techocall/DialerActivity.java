@@ -71,7 +71,7 @@ public class DialerActivity extends Activity {
 		
 		final String jsonData = this.getIntent().getStringExtra("json");
 		
-		wv.addJavascriptInterface(new DialerInterface(this , storageAPIImpl , autoRemoveStatus , this.getIntent().getIntExtra("remaindedUsing", -1)), "Android");
+		wv.addJavascriptInterface(new DialerInterface(this , storageAPIImpl , autoRemoveStatus , this.getIntent().getByteExtra("remaindedUsing", (byte)-1)), "Android");
 		
 		wv.setWebViewClient(new WebViewClient() {
 		    @Override
