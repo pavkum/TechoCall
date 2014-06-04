@@ -1,0 +1,162 @@
+<style>
+
+    .wrapper {
+        padding: 2% 5%;
+    }
+    
+    .control {
+        padding: 2% 5%;
+        background-color: #D2D7D3;
+    }
+    
+    #text {
+        float: left;
+        font-weight: normal;
+        font-size: 110%;
+        color: #848484;
+    }
+    
+    .button  {
+        float: left;
+        background-color: #19B5FE;
+        color: white;
+        font-weight: bold;
+        padding: 0 5%;
+    }
+    
+    .remainderMessage {
+        padding: 2% 5%;
+        background-color: #ECF0F1;
+        background: white;
+        font-size: 100%;
+    }
+    
+    @media screen and (min-height : 240px) {
+                
+        .button , .item  , #text {
+            height: 24px;
+            line-height: 24px;
+        }
+    }
+
+    @media screen and (min-height : 320px) {
+        .button , .item  , #text {
+            height: 32px;
+            line-height: 32px;
+        }
+    }
+
+    @media screen and (min-height : 480px) {
+        .button , .item  , #text {
+            height: 48px;
+            line-height: 48px;
+        }
+    }
+
+    @media screen and (min-height : 600px) {
+        .button , .item  , #text {
+            height: 60px;
+            line-height: 60px;
+        }
+    }
+
+    @media screen and (min-height : 720px) {
+        .button , .item  , #text {
+            height: 72px;
+            line-height: 72px;
+        }
+    }
+
+    @media screen and (min-height : 800px) {
+        
+        .button , .item  , #text {
+            height: 80px;
+            line-height: 80px;
+        }
+    }
+
+    @media screen and (min-height : 900px) {
+        .button , .item  , #text {
+            height: 90px;
+            line-height: 90px;
+        }
+    }
+
+    @media screen and (min-height : 960px) {
+        
+        .button , .item  , #text {
+            height: 96px;
+            line-height: 96px;
+        }
+    }
+
+    @media screen and (min-height : 1200px) {
+        
+        .button , .item  , #text {
+            height: 120px;
+            line-height: 120px;
+        }
+    }
+
+    @media screen and (min-height : 1280px) {
+        .button , .item  , #text {
+            height: 128px;
+            line-height: 128px;
+        }
+    }
+
+    @media screen and (min-height : 1600px) {
+        
+        .button , .item  , #text {
+            height: 160px;
+            line-height: 160px;
+        }
+    }
+
+    @media screen and (min-height : 1920px) {
+        .button , .item  , #text {
+            height: 192px;
+            line-height: 192px;
+        }
+    }
+    
+    
+    
+    .item {
+        background-color: white;
+        margin-top: 2%;
+        padding: 0 5%;
+    }
+    
+    #message {
+        word-break: break-all;   
+    }
+    
+    #how > img {
+        float: right;
+        height: 70%;
+        position: relative;
+        top:15%;
+    }
+</style>
+
+<div class="control">
+        <div class="button" id="remaindAgain"> Remaind Again</div>
+        <div class="clearfix"></div>
+    </div>
+
+<div class="wrapper">
+
+    <div class="item" id="message"></div>
+    
+    <div class="item" >
+        <div id="when"></div>
+        <!--<div id="at">@</div>-->
+    </div>
+    
+    <div class="item" id="how">
+        <div id="text"></div>
+        <img />
+    </div>
+
+</div>
