@@ -60,6 +60,7 @@
 /home/pavan/android_project/TechoCall/platforms/android/ant-build/classes/com/techostic/techocall/PhoneStateChangeActivity.class \
 /home/pavan/android_project/TechoCall/platforms/android/ant-build/classes/com/techostic/techocall/webinterface/DialerInterface.class \
 /home/pavan/android_project/TechoCall/platforms/android/ant-build/classes/com/techostic/techocall/DialerActivity$3.class \
+/home/pavan/android_project/TechoCall/platforms/android/ant-build/classes/com/techostic/techocall/PhoneStateChangeActivity$2.class \
 /home/pavan/android_project/TechoCall/platforms/android/ant-build/classes/com/techostic/techocall/DialerActivity.class \
 /home/pavan/android_project/TechoCall/platforms/android/ant-build/classes/com/techostic/techocall/R$string.class \
 /home/pavan/android_project/TechoCall/platforms/android/ant-build/classes/com/techostic/techocall/R$xml.class \

@@ -22,6 +22,22 @@ var note = (function (){
         //$('#note').height(height*0.4);
     };
     
+    var keyboardFix = function () {
+        var button = elem.find('.control > button');
+        
+        var buttonHeight = button.height();
+        
+        button.height(buttonHeight);
+        button.css('line-height' , buttonHeight + 'px');
+        
+        var note = elem.find('#note');
+        
+        var noteHeight = note.height();
+        
+        note.height(noteHeight);
+        
+    };
+    
     var updateSideBar = function (mode) {
         var template = $('<div></div>');
 
@@ -52,8 +68,6 @@ var note = (function (){
     };
     
     $('body').on('note' ,  function (event , userObj){
-        if(elem.length === 0)
-            elem = $('#workarea');
         
         $('body').trigger('addToHistory',['showRemainders' , [userObj]]);
         
@@ -65,6 +79,8 @@ var note = (function (){
         
         def.done(function (){
             //showNote();
+            
+            keyboardFix();
             
             if(user.readOnly) {
                 
@@ -139,6 +155,10 @@ var note = (function (){
             
             remainderTemp.remainderMessage = content;
             
+            remainderTemp.isRemainded = remainder.isRemainded;
+            remainderTemp.remaindedOn = remainder.remaindedOn;
+            remainderTemp.remaindedUsing = remainder.remaindedUsing;
+            
             techoStorage.updateRemainder(updateSuccess , updateError , [remainderTemp]);
             
         }else{
@@ -149,6 +169,10 @@ var note = (function (){
             remainder.contactId = user.id;    
             //only call or only message or both - 0 : all, 1 - only call, 2 - only message
             remainder.remainderType = 0;
+            
+            remainder.isRemainded = false;
+            remainder.remaindedOn = 0;
+            remainder.remaindedUsing = -1;
         
             remainder.remainderMessage = content;
             

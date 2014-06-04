@@ -10,6 +10,7 @@ import org.json.JSONObject;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Handler;
 import android.telephony.PhoneStateListener;
 import android.telephony.TelephonyManager;
 import android.util.Log;
@@ -44,17 +45,16 @@ public class PhoneStateChangeActivity extends BroadcastReceiver{
                 System.out.println("state : " + state);
                 switch (state) {
     			case TelephonyManager.CALL_STATE_OFFHOOK:
-    				remaindedUsing = 1;
-    				showDialer(context , incomingNumber);
+    				
+    				showDialer(context , incomingNumber , (byte)1);
     				break;
 
     			case TelephonyManager.CALL_STATE_RINGING:
-    				remaindedUsing = 0;
-    				showDialer(context , incomingNumber);
+    				
+    				showDialer(context , incomingNumber ,  (byte)0);
     				break;
     				
     			case TelephonyManager.CALL_STATE_IDLE :
-    				System.out.println("idle");
     				hideDialer(context);
     			}
             }
@@ -93,9 +93,9 @@ public class PhoneStateChangeActivity extends BroadcastReceiver{
 		}
 	}
 	
-	private void showDialer (Context context , String incomingNumber){
+	private void showDialer (final Context context , String incomingNumber , final byte remaindedUsing){
 		
-		Long contactID = storageAPIImpl.getContactIDByPhoneNumber(incomingNumber);
+		final Long contactID = storageAPIImpl.getContactIDByPhoneNumber(incomingNumber);
 		// check only for ID - performance as we expect 99% calls wouldn't be having any remainders
 		
 		
@@ -112,7 +112,7 @@ public class PhoneStateChangeActivity extends BroadcastReceiver{
 			
 			contact.setRemainders(remainderList);
 			
-			JSONObject jsonObject = new JSONObject();
+			final JSONObject jsonObject = new JSONObject();
 			
 			try {
 				jsonObject.put("contactID", contact.getContactID());
@@ -136,14 +136,22 @@ public class PhoneStateChangeActivity extends BroadcastReceiver{
 				return;
 			}
 			
-			dialerIntent = new Intent(context, DialerActivity.class); 
+			new Handler().postDelayed(new Runnable() {
+				
+				@Override
+				public void run() {
+					dialerIntent = new Intent(context, DialerActivity.class); 
+					
+					dialerIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+					dialerIntent.putExtra("contactID", contactID);
+					dialerIntent.putExtra("json", jsonObject.toString());
+					dialerIntent.putExtra("remaindedUsing", remaindedUsing);
+					
+					context.startActivity(dialerIntent);
+				}
+			}, 2000);
 			
-			dialerIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-			dialerIntent.putExtra("contactID", contactID);
-			dialerIntent.putExtra("json", jsonObject.toString());
-			dialerIntent.putExtra("remaindedUsing", this.remaindedUsing);
-			
-	        context.startActivity(dialerIntent);
+	        
 		}
 		
         

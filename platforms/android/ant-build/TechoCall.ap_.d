@@ -48,6 +48,7 @@
 /home/pavan/android_project/TechoCall/platforms/android/assets/www/plugins/org.apache.cordova.contacts/src/windows8 \
 /home/pavan/android_project/TechoCall/platforms/android/assets/www/plugins/org.apache.cordova.contacts/src/windows8/ContactProxy.js \
 /home/pavan/android_project/TechoCall/platforms/android/assets/www/templates/registeredUser.html \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/templates/readRemainder.html \
 /home/pavan/android_project/TechoCall/platforms/android/assets/www/templates/alert.html \
 /home/pavan/android_project/TechoCall/platforms/android/assets/www/templates/userInfo.html \
 /home/pavan/android_project/TechoCall/platforms/android/assets/www/templates/allContacts.html \
@@ -55,8 +56,10 @@
 /home/pavan/android_project/TechoCall/platforms/android/assets/www/templates/showRemainders.html \
 /home/pavan/android_project/TechoCall/platforms/android/assets/www/templates/registeredContacts.html \
 /home/pavan/android_project/TechoCall/platforms/android/assets/www/templates/note.html \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/outgoing.png \
 /home/pavan/android_project/TechoCall/platforms/android/assets/www/img/shutdown.png \
 /home/pavan/android_project/TechoCall/platforms/android/assets/www/img/logo.png \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/img/incoming.png \
 /home/pavan/android_project/TechoCall/platforms/android/assets/www/img/note.png \
 /home/pavan/android_project/TechoCall/platforms/android/assets/www/img/delete.png \
 /home/pavan/android_project/TechoCall/platforms/android/assets/www/img/trash.png \
@@ -85,6 +88,7 @@
 /home/pavan/android_project/TechoCall/platforms/android/assets/www/js/jquery.js \
 /home/pavan/android_project/TechoCall/platforms/android/assets/www/js/header.js \
 /home/pavan/android_project/TechoCall/platforms/android/assets/www/js/fastclick.js \
+/home/pavan/android_project/TechoCall/platforms/android/assets/www/js/readRemainder.js \
 /home/pavan/android_project/TechoCall/platforms/android/assets/www/js/jquery.mobile.custom.min.js \
 /home/pavan/android_project/TechoCall/platforms/android/assets/www/js/showRemainders.js \
 /home/pavan/android_project/TechoCall/platforms/android/assets/www/js/registeredUser.js \

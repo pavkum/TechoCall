@@ -147,12 +147,20 @@ var showAndRemainders = (function (){
          //$('#list').hide();
          //$('#text').show();
          
-         var remainder = JSON.parse( $(event.currentTarget).data('remainder') );
+         var target = $(event.currentTarget);
+         
+         var remainder = JSON.parse( target.data('remainder') );
          
          user.readOnly = true;
          user.remainder = remainder;
          
-         $('body').trigger('note', [JSON.stringify(user)]);
+         if(target.find('.statusIcon').hasClass('done')){
+            $('body').trigger('readRemainder', [JSON.stringify(user)]);
+         }else{
+            $('body').trigger('note', [JSON.stringify(user)]);    
+         }
+         
+         
             
          //$(this).off(event);
         

@@ -1,6 +1,8 @@
 package com.techostic.techocall.webinterface;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -44,19 +46,32 @@ public class DialerInterface {
 			try {
 				JSONArray array = new JSONArray(remainderIds);
 				
-				for(int i=0; i<array.length(); i++){
-					JSONObject jsonRemainder = array.getJSONObject(i);
+				if(autoRemove.equals("1")){
 					
-					Remainder remainder = new Remainder();
+					List<Long> remainderIdList = new ArrayList<Long>();
 					
-					remainder.setRemainderID(jsonRemainder.getLong("id"));
-					remainder.setRemainderMessage(jsonRemainder.getString("message"));
+					for(int i=0; i<array.length(); i++){
+						JSONObject jsonRemainder = array.getJSONObject(i);
+						remainderIdList.add(jsonRemainder.getLong("id"));
+					}
 					
-					remainder.setRemainded(true);
-					remainder.setRemaindedOn(new Date().getTime());
-					remainder.setRemaindedUsing(this.remaindedUsing);
+					storageAPIImpl.deleteRemainder(remainderIdList);
 					
-					storageAPIImpl.updateRemainder(remainder);
+				}else{
+					for(int i=0; i<array.length(); i++){
+						JSONObject jsonRemainder = array.getJSONObject(i);
+						
+						Remainder remainder = new Remainder();
+						
+						remainder.setRemainderID(jsonRemainder.getLong("id"));
+						remainder.setRemainderMessage(jsonRemainder.getString("message"));
+						
+						remainder.setRemainded(true);
+						remainder.setRemaindedOn(new Date().getTime());
+						remainder.setRemaindedUsing(this.remaindedUsing);
+						
+						storageAPIImpl.updateRemainder(remainder);
+					}
 				}
 				
 			} catch (JSONException e) {

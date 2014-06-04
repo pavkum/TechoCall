@@ -158,9 +158,9 @@ public class StoragePlugin extends CordovaPlugin {
 		remainder.setRemainderMessage(jsonRemainder
 				.getString("remainderMessage"));
 		// remainder.setRemainderType(Byte.parseByte(jsonRemainder.getString("remainderType")));
-		remainder.setRemainded(false);
-		remainder.setRemaindedOn(0);
-		remainder.setRemaindedUsing(new Byte("0"));
+		remainder.setRemainded(jsonRemainder.getBoolean("isRemainded"));
+		remainder.setRemaindedOn(jsonRemainder.getLong("remaindedOn"));
+		remainder.setRemaindedUsing((byte)jsonRemainder.getInt("remaindedUsing"));
 
 		this.cordova.getThreadPool().execute(new Runnable() {
 
